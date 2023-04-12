@@ -412,6 +412,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#complexity-analysis" class="md-nav__link">
+    Complexity Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -689,6 +703,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#complexity-analysis" class="md-nav__link">
+    Complexity Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -719,12 +747,16 @@
 <li>当前结点为 <span class="arithmatex">\(u\)</span>，算法最开始时设为根结点。</li>
 <li>如果 <span class="arithmatex">\(u\)</span> 没有左儿子，将 <span class="arithmatex">\(u\)</span> 设为它的右儿子（即往右走），回到步骤 1。</li>
 <li>找到 <span class="arithmatex">\(u\)</span> 左子树中最“右”的结点 <span class="arithmatex">\(v\)</span>（最右的结点指的是中序遍历最后遍历到的结点，可以通过从 <span class="arithmatex">\(u\)</span> 的左儿子不断往右找到）。</li>
-<li>如果 <span class="arithmatex">\(v\)</span> 没有右儿子，那么将 <span class="arithmatex">\(v\)</span> 的右儿子设为 <span class="arithmatex">\(u\)</span>，然后把 <span class="arithmatex">\(u\)</span> 设为 <span class="arithmatex">\(u\)</span> 的左儿子（即往左走），回到步骤 1。</li>
-<li>如果 <span class="arithmatex">\(v\)</span> 的右儿子是 <span class="arithmatex">\(u\)</span>，将 <span class="arithmatex">\(v\)</span> 的右儿子改回空，然后把 <span class="arithmatex">\(u\)</span> 设为 <span class="arithmatex">\(u\)</span> 的右儿子（即往右走），回到步骤1。（注：<span class="arithmatex">\(v\)</span> 的右子树只有可能是这两种情况）</li>
+<li>如果 <span class="arithmatex">\(v\)</span> 没有右儿子，那么将 <span class="arithmatex">\(v\)</span> 的右儿子设为 <span class="arithmatex">\(u\)</span>，然后把 <span class="arithmatex">\(u\)</span> 设为 <span class="arithmatex">\(u\)</span> 的左儿子（即往左走去遍历左子树），回到步骤 1。</li>
+<li>如果 <span class="arithmatex">\(v\)</span> 的右儿子是 <span class="arithmatex">\(u\)</span>，将 <span class="arithmatex">\(v\)</span> 的右儿子改回空，然后把 <span class="arithmatex">\(u\)</span> 设为 <span class="arithmatex">\(u\)</span> 的右儿子（即往右走去遍历右子树），回到步骤1。（注：<span class="arithmatex">\(v\)</span> 的右子树只有可能是这两种情况）</li>
 </ol>
 <p>这个算法为什么是正确的呢？</p>
 <p>当前我们在 <span class="arithmatex">\(u\)</span>，我们将会把左子树遍历一遍，然后继续遍历右子树。左子树中的最右结点 <span class="arithmatex">\(v\)</span> 本来是没有右儿子的，我们把它的右儿子设为 <span class="arithmatex">\(u\)</span>，这样，在遍历完左子树到达最后（中序）遍历到的结点 <span class="arithmatex">\(v\)</span> 的时候，由于 <span class="arithmatex">\(v\)</span> 的右儿子是非空的，我们将会继续遍历 <span class="arithmatex">\(v\)</span> 的右儿子，实际上我们却回到了结点 <span class="arithmatex">\(u\)</span>，然后再找左子树中最右节点就可以发现它的右儿子已经设为 <span class="arithmatex">\(u\)</span>，说明 <span class="arithmatex">\(u\)</span> 实际上并不是 <span class="arithmatex">\(v\)</span> 的右子树，并且 <span class="arithmatex">\(u\)</span> 的左子树已经遍历完了，可以开始遍历右子树了，于是把 <span class="arithmatex">\(u\)</span> 设为它的右儿子然后继续遍历。</p>
 <p><img alt="morris" src="../morris.png" /></p>
+<h2 id="complexity-analysis">Complexity Analysis</h2>
+<p>（额外）空间复杂度显然是 <span class="arithmatex">\(O(1)\)</span>，时间复杂度呢？</p>
+<p>在每个结点最多进行 <span class="arithmatex">\(O(N)\)</span> 次操作，很容易得到一个上界 <span class="arithmatex">\(O(N^2)\)</span>。经过更细致的分析，我们可以发现，每个结点至多会被访问 <span class="arithmatex">\(2\)</span> 次，<span class="arithmatex">\(1\)</span> 次是正常访问到，<span class="arithmatex">\(1\)</span> 次是作为左子树的最右结点被访问到。因此，时间复杂度是 <span class="arithmatex">\(O(N)\)</span> 的。</p>
+<h2 id="code">Code</h2>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">acmoj1826.cpp</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
