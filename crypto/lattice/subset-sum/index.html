@@ -566,6 +566,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../lattice/" class="md-nav__link">
+        网格
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../lll/" class="md-nav__link">
         LLL 算法
       </a>
@@ -711,7 +725,7 @@
 <p><strong>Definition（superincreasing sequence）</strong> 当序列 <span class="arithmatex">\(\mathbf{a}=(a_1,...,a_n)\)</span> 满足 <span class="arithmatex">\(\forall i\in[n]:a_i&gt;\sum_{j=1}^{i-1}a_j\)</span>，称其为爆炸序列（原文是superincreasing sequence，这是我乱翻译的）。</p>
 <p>我们可以发现，对于如果 <span class="arithmatex">\(\mathbf{a}\)</span> 是爆炸序列，求解 <span class="arithmatex">\(\left\langle\mathbf{a},\mathbf{x}\right\rangle\)</span> 会变得十分简单。</p>
 <p>Alice 生成了爆炸序列 <span class="arithmatex">\(\mathbf{b}\)</span> 并公布，Bob 想告诉她 <span class="arithmatex">\(\mathbf{x}\)</span>，于是 Bob 将 <span class="arithmatex">\(s=\left\langle\mathbf{b},\mathbf{x}\right\rangle\)</span> 发送给 Alice，即 ，Alice 就可以通过 <span class="arithmatex">\(s\)</span> 还原 <span class="arithmatex">\(\mathbf{x}\)</span>。但是，在这个过程中，不光 Alice 能还原 <span class="arithmatex">\(\mathbf{x}\)</span>，Eavesdropper 也可以。怎么办呢？</p>
-<p>可以对 <span class="arithmatex">\(\mathbf{b}\)</span> 进行一些转换。Alice 找到一个模数 <span class="arithmatex">\(m&gt;\sum_{i=1}^{n} b_i\)</span> ，一个乘数 <span class="arithmatex">\(w\in\mathbb Z_{m}^{*}\)</span> 和一个排列 <span class="arithmatex">\(\pi\)</span>，构造向量 <span class="arithmatex">\(\mathbf{a}\)</span>，<span class="arithmatex">\(a_i\equiv b_{\pi(i)}w\)</span>。Alice 不再公布 <span class="arithmatex">\(\mathbf{b}\)</span>，改为公布 <span class="arithmatex">\(\mathbf{a}\)</span>，Bob 发送 <span class="arithmatex">\(s'=\left\langle\mathbf{a},\mathbf{x}\right\rangle\)</span>，Alice 就可以通过 <span class="arithmatex">\(s=\sum_{i=1}^{n}a_ix_i\equiv w\sum_{i=1}^{n}b_{\sigma(i)}x_i(\mod m)\)</span> 计算出 <span class="arithmatex">\(\sum_{i=1}^{n}b_{\sigma(i)}x_i\equiv sw^{-1}(\mod m)\)</span> 从而还原 <span class="arithmatex">\(\mathbf{x}\)</span>。外人无从得知 trapdoor <span class="arithmatex">\((w,m,\pi)\)</span>，需要求解一个子集和问题来还原 <span class="arithmatex">\(\mathbf{x}\)</span>。<del>多安全啊，Eavesdropper要是能破解都能拿图灵奖了</del></p>
+<p>可以对 <span class="arithmatex">\(\mathbf{b}\)</span> 进行一些转换。Alice 找到一个模数 <span class="arithmatex">\(m&gt;\sum_{i=1}^{n} b_i\)</span> ，一个乘数 <span class="arithmatex">\(w\in\mathbb Z_{m}^{*}\)</span> 和一个排列 <span class="arithmatex">\(\pi\)</span>，构造向量 <span class="arithmatex">\(\mathbf{a}\)</span>，<span class="arithmatex">\(a_i\equiv b_{\pi(i)}w\)</span>。Alice 不再公布 <span class="arithmatex">\(\mathbf{b}\)</span>，改为公布 <span class="arithmatex">\(\mathbf{a}\)</span>，Bob 发送 <span class="arithmatex">\(s'=\left\langle\mathbf{a},\mathbf{x}\right\rangle\)</span>，Alice 就可以通过 <span class="arithmatex">\(s=\sum_{i=1}^{n}a_ix_i\equiv w\sum_{i=1}^{n}b_{\sigma(i)}x_i(\mod m)\)</span> 计算出 <span class="arithmatex">\(\sum_{i=1}^{n}b_{\sigma(i)}x_i\equiv sw^{-1}(\mod m)\)</span> 从而还原 <span class="arithmatex">\(\mathbf{x}\)</span>。外人无从得知 trapdoor <span class="arithmatex">\((w,m,\pi)\)</span>，需要求解一个子集和问题来还原 <span class="arithmatex">\(\mathbf{x}\)</span>。<del>多安全啊，Eavesdropper要是能破解都证出 P=NP 拿图灵奖了</del></p>
 <p><strong>但是</strong>，需要注意到的一点是，数据随机分布可能会弱化问题（例如，如果随机生成一棵树，它的高度往往是 <span class="arithmatex">\(O(\log N)\)</span> 的）。事实上，我们难以特殊构造 <span class="arithmatex">\(\mathbf{a}\)</span> 使得 <span class="arithmatex">\(\left\langle\mathbf{a},\mathbf{x}\right\rangle=s\)</span> 真的在多项式时间内无法解决。可能只有极少数方程 <span class="arithmatex">\(\left\langle\mathbf{a},\mathbf{x}\right\rangle=s\)</span> 是真正难的，这让子集和问题没有多项式时间的<strong>通解</strong>，可是 <span class="arithmatex">\(s\)</span> 并不是我们可以操控的，它取决于 Bob 想发送的数据 <span class="arithmatex">\(\mathbf{x}\)</span>，<span class="arithmatex">\(s\)</span> 也就可以看作是随机的（如果把 Bob 发送的数据 <span class="arithmatex">\(\mathbf{x}\)</span> 看作是随机的话），这可能使得大部分情况下 <span class="arithmatex">\(\left\langle\mathbf{a},\mathbf{x}\right\rangle=s\)</span> 是多项式时间内可解的。</p>
 <h2 id="lattice-attacks-on-knapsack-cryptography">Lattice Attacks on Knapsack Cryptography</h2>
 <p>事实上，有一种基于 <code>LLL</code> 的算法可以在绝大部分情况下解出 <span class="arithmatex">\(\left\langle\mathbf{a},\mathbf{x}\right\rangle=s\)</span>，这也使得上文提到的公钥加密系统难以工作（Bob 能选择的 <span class="arithmatex">\(\mathbf{x}\)</span> 将会十分有限）。</p>
