@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../../algo/morris/">
       
       
-        <link rel="next" href="../../ds/fenwick/">
+        <link rel="next" href="../../math/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>Morris Traversal - akari-notes</title>
+        <title>树状数组 - akari-notes</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#morris-traversal" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Morris Traversal
+              树状数组
             
           </span>
         </div>
@@ -200,15 +200,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../algo/morris/" class="md-tabs__link">
         算法
       </a>
     </li>
@@ -218,13 +216,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../ds/fenwick/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         数据结构
       </a>
     </li>
@@ -350,6 +350,55 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/morris/" class="md-nav__link">
+        Morris Traversal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -359,19 +408,19 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          算法
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          数据结构
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          算法
+          数据结构
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -391,12 +440,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Morris Traversal
+          树状数组
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Morris Traversal
+        树状数组
       </a>
       
         
@@ -422,29 +471,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#morris-traversal_1" class="md-nav__link">
-    Morris Traversal
+  <a href="#lowbit" class="md-nav__link">
+    lowbit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#complexity-analysis" class="md-nav__link">
-    Complexity Analysis
+  <a href="#fenwick-tree" class="md-nav__link">
+    Fenwick Tree
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#order" class="md-nav__link">
-    Order
+  <a href="#relationship-with-segment-tree" class="md-nav__link">
+    Relationship with Segment Tree
   </a>
   
 </li>
@@ -453,55 +495,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          数据结构
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          数据结构
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ds/fenwick/" class="md-nav__link">
-        树状数组
-      </a>
     </li>
   
 
@@ -989,29 +982,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#morris-traversal_1" class="md-nav__link">
-    Morris Traversal
+  <a href="#lowbit" class="md-nav__link">
+    lowbit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#complexity-analysis" class="md-nav__link">
-    Complexity Analysis
+  <a href="#fenwick-tree" class="md-nav__link">
+    Fenwick Tree
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#order" class="md-nav__link">
-    Order
+  <a href="#relationship-with-segment-tree" class="md-nav__link">
+    Relationship with Segment Tree
   </a>
   
 </li>
@@ -1031,122 +1017,68 @@
                   
 
 
-<h1 id="morris-traversal">Morris Traversal</h1>
-<p>Problem Link: <a href="https://acm.sjtu.edu.cn/OnlineJudge/problem/1826">ACMOJ1826</a></p>
+<h1 id="_1">树状数组</h1>
 <h2 id="background">Background</h2>
-<p>遍历一棵 <strong>二叉</strong> 树？那必然是 <code>DFS</code> 啊，好写又快，就算考虑到递归层数太多爆栈，写 <code>BFS</code> 就好了啊。</p>
-<p>但是，如果只用 <span class="arithmatex">\(O(1)\)</span> 的额外空间呢？DFS 的话可能要用 <span class="arithmatex">\(O(N)\)</span> 的空间诶（当树退化成一条链的时候）。</p>
-<p><del>for i = 1 to n</del></p>
-<p>（注意下，不要搞，也没必要搞一些小聪明，比如说把边取负来标记这条边有没有访问过这些，完全没必要啊）</p>
-<p>这时候，Morris Traversal 就可以不用递归、不用栈/队列、只用 <span class="arithmatex">\(O(1)\)</span> 额外空间遍历一棵树。</p>
-<p><a href="https://www.sciencedirect.com/science/article/pii/0167642388900639">Morris' tree traversal algorithm reconsidered</a></p>
-<h2 id="morris-traversal_1">Morris Traversal</h2>
-<p>我们先来讲述一下算法的流程。</p>
+<p>有一个数组 <span class="arithmatex">\(a\)</span>，要求支持两种操作：</p>
 <ol>
-<li>当前结点为 <span class="arithmatex">\(u\)</span>，算法最开始时设为根结点。</li>
-<li>如果 <span class="arithmatex">\(u\)</span> 没有左儿子，将 <span class="arithmatex">\(u\)</span> 设为它的右儿子（即往右走），回到步骤 1。</li>
-<li>找到 <span class="arithmatex">\(u\)</span> 左子树中最“右”的结点 <span class="arithmatex">\(v\)</span>（最右的结点指的是中序遍历最后遍历到的结点，可以通过从 <span class="arithmatex">\(u\)</span> 的左儿子不断往右找到）。</li>
-<li>如果 <span class="arithmatex">\(v\)</span> 没有右儿子，那么将 <span class="arithmatex">\(v\)</span> 的右儿子设为 <span class="arithmatex">\(u\)</span>，然后把 <span class="arithmatex">\(u\)</span> 设为 <span class="arithmatex">\(u\)</span> 的左儿子（即往左走去遍历左子树），回到步骤 1。</li>
-<li>如果 <span class="arithmatex">\(v\)</span> 的右儿子是 <span class="arithmatex">\(u\)</span>，将 <span class="arithmatex">\(v\)</span> 的右儿子改回空，然后把 <span class="arithmatex">\(u\)</span> 设为 <span class="arithmatex">\(u\)</span> 的右儿子（即往右走去遍历右子树），回到步骤1。（注：<span class="arithmatex">\(v\)</span> 的右子树只有可能是这两种情况）</li>
+<li>在第 <span class="arithmatex">\(i\)</span> 个位置 <span class="arithmatex">\(a[i]\)</span> 上加 <span class="arithmatex">\(x\)</span>（单点修改）；</li>
+<li>查询 <span class="arithmatex">\(\sum_{i=1}^{r}a[i]\)</span>（区间查询，很容易推广到 <span class="arithmatex">\([l,r]\)</span>）。</li>
 </ol>
-<p>这个算法为什么是正确的呢？</p>
-<p>当前我们在 <span class="arithmatex">\(u\)</span>，我们将会把左子树遍历一遍，然后继续遍历右子树。左子树中的最右结点 <span class="arithmatex">\(v\)</span> 本来是没有右儿子的，我们把它的右儿子设为 <span class="arithmatex">\(u\)</span>，这样，在遍历完左子树到达最后（中序）遍历到的结点 <span class="arithmatex">\(v\)</span> 的时候，由于 <span class="arithmatex">\(v\)</span> 的右儿子是非空的，我们将会继续遍历 <span class="arithmatex">\(v\)</span> 的右儿子，实际上我们却回到了结点 <span class="arithmatex">\(u\)</span>，然后再找左子树中最右节点就可以发现它的右儿子已经设为 <span class="arithmatex">\(u\)</span>，说明 <span class="arithmatex">\(u\)</span> 实际上并不是 <span class="arithmatex">\(v\)</span> 的右子树，并且 <span class="arithmatex">\(u\)</span> 的左子树已经遍历完了，可以开始遍历右子树了，于是把 <span class="arithmatex">\(u\)</span> 设为它的右儿子然后继续遍历。</p>
-<p><img alt="morris" src="../morris.png" /></p>
-<h2 id="complexity-analysis">Complexity Analysis</h2>
-<p>（额外）空间复杂度显然是 <span class="arithmatex">\(O(1)\)</span>，时间复杂度呢？</p>
-<p>在每个结点最多进行 <span class="arithmatex">\(O(N)\)</span> 次操作，很容易得到一个上界 <span class="arithmatex">\(O(N^2)\)</span>。经过更细致的分析，我们可以发现，每个结点至多会被访问 <span class="arithmatex">\(2\)</span> 次，<span class="arithmatex">\(1\)</span> 次是正常访问到，<span class="arithmatex">\(1\)</span> 次是作为左子树的最右结点被访问到。因此，时间复杂度是 <span class="arithmatex">\(O(N)\)</span> 的。</p>
-<h2 id="code">Code</h2>
-<div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">acmoj1826.cpp</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cp">#define N 1000</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">struct</span><span class="w"> </span><span class="nc">tree</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="p">;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="p">;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">}</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">){</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">){</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">v</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有左子树，直接走右结点</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">right</span><span class="p">;</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">left</span><span class="p">;</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">right</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">right</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c1">// 找到左子树的最右结点</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">                </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">right</span><span class="p">;</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">right</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">){</span><span class="w"> </span><span class="c1">// 左子树还没有遍历过</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">                </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">v</span><span class="p">;</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">                </span><span class="n">ts</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">                </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">left</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 左子树已经遍历完了</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">                </span><span class="n">ts</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">                </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">right</span><span class="p">;</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="p">}</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">  </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">left</span><span class="p">;</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">right</span><span class="p">;</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">v</span><span class="p">;</span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="p">();</span>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="order">Order</h2>
-<p>可以发现，我们现在的遍历顺序是前序遍历。只要稍加修改，就可以变成中序遍历。</p>
-<p>那么，问题来了，怎样用 <span class="arithmatex">\(O(1)\)</span> 额外空间实现后序遍历？最佳回答：我不知道。</p>
+<p>暴力可以实现 <span class="arithmatex">\(O(1)\)</span> 单点修改，<span class="arithmatex">\(O(n)\)</span> 区间查询。如果使用前缀和，可以实现 <span class="arithmatex">\(O(n)\)</span> 单点修改 <span class="arithmatex">\(O(1)\)</span> 查询。这两种方法都不够优秀。</p>
+<p>用线段树当然可以实现，但是，有一种更好写、码量更小、常数更小、空间更少的数据结构——树状数组。</p>
+<h2 id="lowbit">lowbit</h2>
+<p>在介绍树状数组前，我们先来了解一下前置芝士—— <span class="arithmatex">\(\text{lowbit}\)</span>。</p>
+<p><strong>Definition（lowbit）</strong> <span class="arithmatex">\(\text{lowbit}(x)(x\in\mathbb N^{+})\)</span> 表示 <span class="arithmatex">\(x\)</span> 在二进制下的最低位的 <span class="arithmatex">\(1\)</span> 与后面的所有 <span class="arithmatex">\(0\)</span> 所构成的数值。</p>
+<p>举个栗子，<span class="arithmatex">\(\text{lowbit}((24)_{10})=\text{lowbit}((11000)_{2})=(1000)_{2}\)</span>。</p>
+<p>我们很快可以得到一个很 low 的方法计算 <span class="arithmatex">\(\text{lowbit}\)</span>。</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">lowbit</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>有没有更快的方法呢？显然是有的。 设 <span class="arithmatex">\(n=\log(\text{lowbit(x)})\)</span>，代表 <span class="arithmatex">\(x\)</span> 末尾有几个 <span class="arithmatex">\(0\)</span>。<code>~x</code> 表示 <span class="arithmatex">\(x\)</span> 的每一位都取反，因此 <code>~x</code> 末尾就有 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(1\)</span>。<code>~x+1</code> 的末尾 <span class="arithmatex">\(n+1\)</span> 位就是 <span class="arithmatex">\(1\underbrace{0\cdots 0}_{n\text{ 个 }0}\)</span>，与 <span class="arithmatex">\(x\)</span> 的末尾 <span class="arithmatex">\(n+1\)</span> 位恰好相同，而其他位 <span class="arithmatex">\(x\)</span> 与 <code>~x</code> 都恰好相反。因此 <span class="arithmatex">\(\text{lowbit}(x)=(\sim x+1) \&amp; x\)</span></p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">lowbit</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>实际上，由于 <span class="arithmatex">\(\sim x+x=2^{32}-1\)</span>，可以得到 <span class="arithmatex">\(\sim x+1=2^{32}-x\)</span>，由于自然溢出（本质上就是对 <span class="arithmatex">\(2^{32}\)</span> 取模），得到 <span class="arithmatex">\(\sim x+1=-x\)</span>。由此得到另一种写法。</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">lowbit</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="fenwick-tree">Fenwick Tree</h2>
+<p>树状数组，其实就是用 <span class="arithmatex">\(s[i]\)</span> 存储 <span class="arithmatex">\([i-\text{lowbit}(i)+1,i]\)</span> 之间的数据之和。因此，很容易写出求和操作的代码。</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Get</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>举个栗子，<span class="arithmatex">\([1,26]\)</span> 的区间划分过程就是 <span class="arithmatex">\([(1)_{2},(11010)_{2}]=[(11001)_{2},(11010)_{2}]\cup[(10001)_{2},(11000)_{2}]\cup[(1)_{2},(10000)_{2}]\)</span>，
+对应着 <span class="arithmatex">\(sum([1,26])=s[(11010)_{2}]+s[(11000)_{2}]+s[(10000)_{2}]\)</span>。</p>
+<p>单点修改又当如何？先给出结果：从 <span class="arithmatex">\(i=i_0\)</span> 开始，不断加上 <span class="arithmatex">\(\text{lowbit}(i)\)</span> 以获得下一个需要修改的位置。</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Add</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><span class="arithmatex">\(s[j]\)</span> 需要被修改当且仅当 <span class="arithmatex">\(j-\text{lowbit}(j)&lt; i\leq j\)</span>。首先需要修改的就是 <span class="arithmatex">\(s[i]\)</span>，那么其他还有哪些需要修改？仔细分析一下可以发现，<span class="arithmatex">\(j-\text{lowbit}(j)\)</span> 与 <span class="arithmatex">\(j\)</span> 唯一的差别是从低到高数第 <span class="arithmatex">\(t\)</span> 位（<span class="arithmatex">\(2^t=\text{lowbit}(j)\)</span>），前者这一位为 <span class="arithmatex">\(0\)</span>，后者为 <span class="arithmatex">\(1\)</span>。因此，它们比第 <span class="arithmatex">\(t\)</span> 位高的位都应该和 <span class="arithmatex">\(i\)</span> 一样，并且 <span class="arithmatex">\(i\)</span> 的低 <span class="arithmatex">\(t\)</span> 位不能全为 <span class="arithmatex">\(0\)</span>。而上面所说方法恰好可以获得所有满足这种条件的 <span class="arithmatex">\(i\)</span>。（我也知道这里说得很模糊 XD 以后再改改）</p>
+<h2 id="relationship-with-segment-tree">Relationship with Segment Tree</h2>
+<p>常有人说，树状数组实际上就是砍掉一半的线段树。为什么这么说？不失一般性地，设 <span class="arithmatex">\(n=2^k\)</span>。</p>
+<p>下面是一棵 <span class="arithmatex">\([1,2^3]\)</span> 的线段树，其中打钩的结点是树状数组中存储的数据。</p>
+<p><img alt="" src="../fenwick1.png" /></p>
+<p>可以看出，树状数组只存储了所有左儿子（包括根结点）的数据。那么，为什么存储这些结点的数据就够了呢？</p>
+<p>在线段树查询 <span class="arithmatex">\([1,r]\)</span> 的时候，我们从根结点 <span class="arithmatex">\([1,n=2^3]\)</span> 出发，可以分成三种情况：</p>
+<ol>
+<li>若 <span class="arithmatex">\([1,r]\)</span> 完全包含了当前结点存储的区间（当前是 <span class="arithmatex">\([1,n=2^3]\)</span>），那么我们已经得到了结果；</li>
+<li>若 <span class="arithmatex">\([1,r]\)</span> 完全包含了左儿子的区间（当前是 <span class="arithmatex">\([1,\frac n2=2^2]\)</span>），那么左儿子的数据加上右子树中落在 <span class="arithmatex">\([1,r]\)</span> 中的数据之和（递归求解）就是结果，这个过程中我们没有用到右儿子的数据；</li>
+<li>若左儿子的区间不完全在 <span class="arithmatex">\([1,r]\)</span> 内，那么左子树中落在 <span class="arithmatex">\([1,r]\)</span> 中的数据之和（递归求解）就是结果。</li>
+</ol>
+<p>注意到，这三种情况都没有用到所有右儿子的数据。这说明如果只需要求前缀和，总共 <span class="arithmatex">\(2n-1\)</span> 个结点有 <span class="arithmatex">\(n-1\)</span> 个结点是没有用的，只存储剩下 <span class="arithmatex">\(n\)</span> 个结点已经完全够了——这就是树状数组，树状数组 <span class="arithmatex">\(s[i]\)</span> 存的就是线段树中第 <span class="arithmatex">\(i\)</span> 个叶子结点的最近有用的祖先（最近的打钩的结点）所存储的数据。（从另外一方面看，线段树种有用结点代表区间 <span class="arithmatex">\([l,r]\)</span> 的右边界 <span class="arithmatex">\(r\)</span>，即对应着树状数组中的 <span class="arithmatex">\(s[r]\)</span>）</p>
+<p>对于线段树中第 <span class="arithmatex">\(i\)</span> 个叶子结点，根结点到它的路径可以表示为 <span class="arithmatex">\(i-1\)</span> 的二进制表示（<span class="arithmatex">\(0\)</span> 表示向左，<span class="arithmatex">\(1\)</span> 表示向右）。例如，对于第 <span class="arithmatex">\(6\)</span> 个结点，<span class="arithmatex">\((6-1)_{10}=(101)_{2}\)</span>，而从根结点到第 <span class="arithmatex">\(6\)</span> 个叶子结点的路径就是右、左、右。第 <span class="arithmatex">\(i\)</span> 个叶子结点的最近有用祖先，一定是根结点或者它的父亲结点的左儿子，并且从它出发一直往右走可以到达第 <span class="arithmatex">\(i\)</span> 个叶子结点。因此，若 <span class="arithmatex">\(i-1\)</span> 的二进制表示的末尾连续 <span class="arithmatex">\(1\)</span> 的个数是 <span class="arithmatex">\(t\)</span>，那么第 <span class="arithmatex">\(i\)</span> 个叶子结点的 <span class="arithmatex">\(t\)</span> 级祖先就是它的最近有用祖先，而 <span class="arithmatex">\(t=\log(\text{lowbit}(i))\)</span>。而第 <span class="arithmatex">\(i\)</span> 个叶子结点的最近有用祖先的区间长度是 <span class="arithmatex">\(2^t=\text{lowbit}(i)\)</span>，并且 <span class="arithmatex">\(i\)</span> 是区间的右边界，因此树状数组中 <span class="arithmatex">\(s[i]\)</span> 代表的区间是 <span class="arithmatex">\([i-\text{lowbit}(i)+1,i]\)</span>。</p>
+<p>至此，我们已经实现了从线段树与树状数组的对应关系。</p>
 
 
 
@@ -1168,7 +1100,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="上一页: 首页" rel="prev">
+          <a href="../../algo/morris/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Morris Traversal" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1177,20 +1109,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                首页
+                Morris Traversal
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../ds/fenwick/" class="md-footer__link md-footer__link--next" aria-label="下一页: 树状数组" rel="next">
+          <a href="../../math/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数学" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                树状数组
+                数学
               </div>
             </div>
             <div class="md-footer__button md-icon">
