@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../linear_algebra/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="9/">
+        <link rel="next" href="../10/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>数学分析 - akari-notes</title>
+        <title>第九章 多元函数的极限与连续 - akari-notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ii-glimpse" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -85,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="akari-notes" class="md-header__button md-logo" aria-label="akari-notes" data-md-component="logo">
+    <a href="../../.." title="akari-notes" class="md-header__button md-logo" aria-label="akari-notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数学分析
+              第九章 多元函数的极限与连续
             
           </span>
         </div>
@@ -190,7 +190,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         首页
       </a>
     </li>
@@ -206,7 +206,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../algo/morris/" class="md-tabs__link">
+      <a href="../../../algo/morris/" class="md-tabs__link">
         算法
       </a>
     </li>
@@ -222,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ds/fenwick/" class="md-tabs__link">
+      <a href="../../../ds/fenwick/" class="md-tabs__link">
         数据结构
       </a>
     </li>
@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         数学
       </a>
     </li>
@@ -256,7 +256,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../crypto/" class="md-tabs__link">
+      <a href="../../../crypto/" class="md-tabs__link">
         密码学
       </a>
     </li>
@@ -272,7 +272,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../tools/" class="md-tabs__link">
+      <a href="../../../tools/" class="md-tabs__link">
         工具
       </a>
     </li>
@@ -300,7 +300,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="akari-notes" class="md-nav__button md-logo" aria-label="akari-notes" data-md-component="logo">
+    <a href="../../.." title="akari-notes" class="md-nav__button md-logo" aria-label="akari-notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
@@ -346,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         首页
       </a>
     </li>
@@ -395,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algo/morris/" class="md-nav__link">
+      <a href="../../../algo/morris/" class="md-nav__link">
         Morris Traversal
       </a>
     </li>
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/fenwick/" class="md-nav__link">
+      <a href="../../../ds/fenwick/" class="md-nav__link">
         树状数组
       </a>
     </li>
@@ -495,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         数学
       </a>
     </li>
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comb/" class="md-nav__link">
+      <a href="../../comb/" class="md-nav__link">
         组合数学
       </a>
     </li>
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear_algebra/" class="md-nav__link">
+      <a href="../../linear_algebra/" class="md-nav__link">
         线性代数
       </a>
     </li>
@@ -632,6 +632,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        数学分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -643,9 +657,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          第九章 多元函数的极限与连续
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        数学分析
+        第九章 多元函数的极限与连续
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    9.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    9.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -658,21 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="9/" class="md-nav__link">
-        第九章 多元函数的极限与连续
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="10/" class="md-nav__link">
+      <a href="../10/" class="md-nav__link">
         第十章 多元函数微分学
       </a>
     </li>
@@ -720,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../probability_theory/" class="md-nav__link">
+      <a href="../../probability_theory/" class="md-nav__link">
         概率论
       </a>
     </li>
@@ -776,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/" class="md-nav__link">
+      <a href="../../../crypto/" class="md-nav__link">
         密码学
       </a>
     </li>
@@ -817,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/classical/" class="md-nav__link">
+      <a href="../../../crypto/classical/" class="md-nav__link">
         古典密码学
       </a>
     </li>
@@ -865,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/lattice/" class="md-nav__link">
+      <a href="../../../crypto/lattice/" class="md-nav__link">
         格密码学
       </a>
     </li>
@@ -879,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/lattice/lattice/" class="md-nav__link">
+      <a href="../../../crypto/lattice/lattice/" class="md-nav__link">
         网格
       </a>
     </li>
@@ -893,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/lattice/lll/" class="md-nav__link">
+      <a href="../../../crypto/lattice/lll/" class="md-nav__link">
         LLL 算法
       </a>
     </li>
@@ -907,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/lattice/coppersmith/" class="md-nav__link">
+      <a href="../../../crypto/lattice/coppersmith/" class="md-nav__link">
         Coppersmith 法
       </a>
     </li>
@@ -921,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crypto/lattice/subset-sum/" class="md-nav__link">
+      <a href="../../../crypto/lattice/subset-sum/" class="md-nav__link">
         子集和问题
       </a>
     </li>
@@ -977,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/" class="md-nav__link">
+      <a href="../../../tools/" class="md-nav__link">
         工具
       </a>
     </li>
@@ -991,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/valgrind/" class="md-nav__link">
+      <a href="../../../tools/valgrind/" class="md-nav__link">
         valgrind
       </a>
     </li>
@@ -1005,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/yafu/" class="md-nav__link">
+      <a href="../../../tools/yafu/" class="md-nav__link">
         yafu
       </a>
     </li>
@@ -1019,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/everything/" class="md-nav__link">
+      <a href="../../../tools/everything/" class="md-nav__link">
         Everything
       </a>
     </li>
@@ -1033,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/postman/" class="md-nav__link">
+      <a href="../../../tools/postman/" class="md-nav__link">
         Postman
       </a>
     </li>
@@ -1067,6 +1112,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    9.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    9.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1080,9 +1154,92 @@
                   
 
 
-<h1 id="ii-glimpse">数学分析 II Glimpse</h1>
-<p><a href="https://www.desmos.com/calculator">Desmos</a></p>
-<p><a href="https://www.geogebra.org/calculator">GeoGebra</a></p>
+<h1 id="_1">第九章 多元函数的极限与连续</h1>
+<h2 id="91">9.1</h2>
+<p><strong>Definition（距离）</strong> 距离满足以下性质：</p>
+<ul>
+<li>正定性：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||\geq 0\)</span>，且 <span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||=0\)</span> 当且仅当 <span class="arithmatex">\(\symbfit{x}=\symbfit{y}\)</span>；</li>
+<li>对称性：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||=||\symbfit{y}-\symbfit{x}||\)</span>；</li>
+<li>三角不等式：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||\leq ||\symbfit{x}-\symbfit{z}||+||\symbfit{z}-\symbfit{y}||\)</span></li>
+</ul>
+<p><strong>Definition（内点，外点，边界点）</strong></p>
+<ul>
+<li>内点：<span class="arithmatex">\(\exists \delta&gt;0:U(x_0,\delta)\subset E\)</span>，全体内点记为 <span class="arithmatex">\(E^o\)</span></li>
+<li>外点：<span class="arithmatex">\(\exists \delta&gt;0:U(x_0,\delta)\cap E=\varnothing\)</span></li>
+<li>边界点：<span class="arithmatex">\(\forall \delta&gt;0:U(x_0,\delta)\cap E\neq\varnothing\)</span> 且 <span class="arithmatex">\(U(x_0,\delta)\cap E^c\neq\varnothing\)</span></li>
+</ul>
+<p><span class="arithmatex">\(E^c=\mathbb R^n\backslash E\)</span> 称为 <span class="arithmatex">\(E\)</span> 的余集。</p>
+<p>全体边界点记为 <span class="arithmatex">\(\partial E\)</span></p>
+<p>聚点：<span class="arithmatex">\(\forall \delta&gt;0:\sharp(U(x_0,\delta)\cap E)=\infty\)</span></p>
+<p>全体聚点称为导集，记为 <span class="arithmatex">\(E'\)</span></p>
+<p>聚点的充分必要条件：存在互异点列 <span class="arithmatex">\(\{x_k\}\subset E\)</span> 且 <span class="arithmatex">\(x_k\neq x_0\)</span> 使得 <span class="arithmatex">\(\lim_{k\to\infty}x_k=x_0\)</span></p>
+<p>孤立点：<span class="arithmatex">\(\exists \delta&gt;0:U(x_0,\delta)\cap E=x_0\)</span></p>
+<p>开集：<span class="arithmatex">\(E\)</span> 中的点均为 <span class="arithmatex">\(E\)</span> 的内点，即 <span class="arithmatex">\(E=E^o\)</span></p>
+<p>闭集：<span class="arithmatex">\(E\)</span> 中的聚点均属于 <span class="arithmatex">\(E\)</span>，即 <span class="arithmatex">\(E'\subset E\)</span></p>
+<p>闭包：<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(E'\)</span> 的并集，记为 <span class="arithmatex">\(\overline{E}\)</span></p>
+<p>闭集套定理：
+设非空闭集列 <span class="arithmatex">\(\{E_k\}\)</span> 满足：</p>
+<ul>
+<li><span class="arithmatex">\(E_{k+1}\subset E_k(k\in\mathbb N)\)</span></li>
+<li><span class="arithmatex">\(E_k\)</span> 的直径 <span class="arithmatex">\(\text{diam}E_k\to 0(k\to\infty)\)</span></li>
+</ul>
+<p>则存在唯一的点 <span class="arithmatex">\(x\in E_k(\forall k\in\mathbb N)\)</span></p>
+<p>Bolzano-Weierstrass 定理：
+<span class="arithmatex">\(\mathbb R^n\)</span> 中的有界点列 <span class="arithmatex">\(\{x_k\}\)</span> 必有收敛子点列
+聚点定理：
+<span class="arithmatex">\(\mathbb R^n\)</span> 中的有限无限点集至少有一个聚点</p>
+<p>紧集：集合 <span class="arithmatex">\(E\)</span> 的任一开覆盖均存在有限子覆盖</p>
+<p>Heine-Borel 定理：
+设 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，<span class="arithmatex">\(E\)</span> 为紧集的充分必要条件是 <span class="arithmatex">\(E\)</span> 为有界闭集</p>
+<p>Thm: <span class="arithmatex">\(\mathbb R^n\)</span> 中以下三条性质等价:</p>
+<ul>
+<li>K 有界闭</li>
+<li>K 紧</li>
+<li>K 中任意点列必有收敛子列，且收敛的极限 <span class="arithmatex">\(\in K\)</span> (自列紧)</li>
+</ul>
+<p>(紧比有界闭强很多)</p>
+<h2 id="92">9.2</h2>
+<p><span class="arithmatex">\(f(D)=\{f(x)|x\in D\}\)</span> 像集
+<span class="arithmatex">\(\Gamma(D)=\{(x,f(x))|x\in D\}\)</span> 图集</p>
+<p>极限：
+设 <span class="arithmatex">\(D\in \mathbb R^n\)</span>，<span class="arithmatex">\(x_0\)</span> 是 <span class="arithmatex">\(D\)</span> 的一个聚点, <span class="arithmatex">\(f:D\backslash\{x_0\}\to\mathbb R^n\)</span>
+若 <span class="arithmatex">\(\exists A\in \mathbb R^n\)</span> s.t. <span class="arithmatex">\(\forall \varepsilon &gt;0\exists\delta&gt;-\forall x\in (B_{\delta}(x_0)\backslash\{x_0\})\cap D:||f(x)-a||&lt;\varepsilon\)</span></p>
+<p>累次极限：二元函数 <span class="arithmatex">\(f:X\times Y\to \mathbb R\)</span>，若任意给定 <span class="arithmatex">\(x\in X\)</span>，首次极限 <span class="arithmatex">\(\lim_{y\to y_0}f(x,y)\)</span> 存在并且极限 <span class="arithmatex">\(\lim_{x\to x_0}\lim_{y\to y_0}f(x,y)\)</span> 存在，则称此极限值为 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\((x_0,y_0)\)</span> 处先 <span class="arithmatex">\(y\)</span> 后 <span class="arithmatex">\(x\)</span> 的累次极限（或二次极限）</p>
+<p>定理：设二元函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 处存在二重极限，即</p>
+<div class="arithmatex">\[
+    \lim_{(x,y)\to(x_0,y_0)}f(x,y)=A
+\]</div>
+<p>且当 <span class="arithmatex">\(x\neq x_0\)</span> 时，存在首次极限 <span class="arithmatex">\(\lim_{y\to y_0}f(x,y)=\varphi(x)\)</span>，则 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 处先 <span class="arithmatex">\(y\)</span> 后 <span class="arithmatex">\(x\)</span> 的二次极限必定存在，且</p>
+<div class="arithmatex">\[
+    \lim_{x\to x_0}\lim_{y\to y_0}f(x,y)=\lim_{(x,y)\to(x_0,y_0)} f(x, y)=A
+\]</div>
+<p>推论：
+若 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的两个二次极限与二重极限均存在，则三者必相等。
+若 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的两次二次极限存在但不相等，则二重极限必不存在</p>
+<p>多元映射极限具有：
+唯一性、局部有界性、局部保号性、夹逼性、四则运算</p>
+<p>还可以用另一种方式定义极限
+设 <span class="arithmatex">\(f:D\subset\mathbb R^n\to \mathbb R\)</span></p>
+<p>连续性
+Def 设 <span class="arithmatex">\(f:D\in\mathbb R^n\longrightarrow \mathbb R^m\)</span>, 若 <span class="arithmatex">\(\forall\varepsilon &gt;0,\exists\delta&gt;0,\forall x\in B_{\delta}(x)\cap D:||f(x)-f(x_0)||&lt;\varepsilon\)</span>, 称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x_0\)</span> 出连续，记 <span class="arithmatex">\(f\in C(D,\mathbb R^m)\)</span></p>
+<p><span class="arithmatex">\(f\)</span> 连续，<span class="arithmatex">\(f(\text{紧})=\text{紧}\)</span>，<span class="arithmatex">\(f(\text{连通})=\text{连通}\)</span>，<span class="arithmatex">\(f(\text{道路联通})=\text{道路联通}\)</span></p>
+<p>Thm（Cantor） 设<span class="arithmatex">\(f\in C(K,\mathbb R^m)\)</span>, <span class="arithmatex">\(K\)</span> 紧，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(K\)</span> 上一致连续。
+Def（道路）设 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，若 <span class="arithmatex">\(\forall x,y\in E,\exists E\)</span> 中的道路 <span class="arithmatex">\(\gamma\)</span> 连接 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，称 <span class="arithmatex">\(E\)</span> 为道路联通集。
+Thm 设 <span class="arithmatex">\(f\in C(E,\mathbb R^m)\)</span>，<span class="arithmatex">\(E\)</span> 道路连通，则 <span class="arithmatex">\(f(E)\)</span> 道路连通。</p>
+<h2 id="notes">Notes</h2>
+<p>距离 -&gt; 邻域 -&gt; 有了邻域就可以考虑内点这些东西</p>
+<p>点的极限 边界点定义 导集定义 孤立点</p>
+<p>经典证明：边界点集合是闭集</p>
+<p>开集和闭集</p>
+<p><span class="arithmatex">\(\mathbb R^n\)</span> 中的四个定理：柯西收敛准则、闭矩形套定理、BW定理、凝聚定理</p>
+<p>（上面这些考的内容不多）</p>
+<p>连续定义、一致连续</p>
+<p>累次极限（一元观点）</p>
+<p>经典例子：sin+多项式函数组合</p>
+<p>多元函数的一致连续性</p>
+<p>连续函数的性质：一个极限点列的函数值收敛到极限点的函数值、把紧集映射称紧集、Cantor（紧集上连续函数一定一致连续）</p>
+<p>紧集定义：有限覆盖</p>
+<p>区域：道路连通</p>
 
 
 
@@ -1104,7 +1261,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../linear_algebra/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 线性代数" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 数学分析" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1113,20 +1270,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                线性代数
+                数学分析
               </div>
             </div>
           </a>
         
         
           
-          <a href="9/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第九章 多元函数的极限与连续" rel="next">
+          <a href="../10/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第十章 多元函数微分学" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                第九章 多元函数的极限与连续
+                第十章 多元函数微分学
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1158,12 +1315,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
