@@ -689,15 +689,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#91" class="md-nav__link">
-    9.1
+  <a href="#91-n-euclid" class="md-nav__link">
+    9.1 n 维 Euclid 空间中及基本定理
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#92" class="md-nav__link">
-    9.2
+    9.2 多元函数的极限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    9.3 多元函数的连续性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    9.4 连续函数的性质
   </a>
   
 </li>
@@ -1091,6 +1105,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../tools/duipai/" class="md-nav__link">
+        对拍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../tools/valgrind/" class="md-nav__link">
         valgrind
       </a>
@@ -1181,15 +1209,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#91" class="md-nav__link">
-    9.1
+  <a href="#91-n-euclid" class="md-nav__link">
+    9.1 n 维 Euclid 空间中及基本定理
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#92" class="md-nav__link">
-    9.2
+    9.2 多元函数的极限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    9.3 多元函数的连续性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    9.4 连续函数的性质
   </a>
   
 </li>
@@ -1222,66 +1264,70 @@
 <ol>
 <li>任意多个开集的并是开集</li>
 <li><span class="arithmatex">\(\overline{S}=S\cup\partial S\)</span></li>
-<li><span class="arithmatex">\(S_1,S_2\)</span> 为有界闭集，<span class="arithmatex">\(S_1\cup S_2=\varnothing\)</span>，则 <span class="arithmatex">\(\exists O_1\nsubset S_1,O_2\nsubset S_2\)</span>，s.t.，<span class="arithmatex">\(O_1\cap O_2=\varnothing\)</span>，<span class="arithmatex">\(O_1,O_2\)</span> 为开集。</li>
+<li><span class="arithmatex">\(S_1,S_2\)</span> 为有界闭集，<span class="arithmatex">\(S_1\cup S_2=\varnothing\)</span>，则 <span class="arithmatex">\(\exists O_1\supset S_1,O_2\supset S_2\)</span>，s.t.，<span class="arithmatex">\(O_1\cap O_2=\varnothing\)</span>，<span class="arithmatex">\(O_1,O_2\)</span> 为开集。</li>
 </ol>
 <p>Cauchy 收敛准则 <span class="arithmatex">\(\rightarrow\)</span> 闭集套定理 <span class="arithmatex">\(\rightarrow\)</span> B-W <span class="arithmatex">\(\rightarrow\)</span> Cauchy 收敛准则</p>
-<p><span class="arithmatex">\(\mathbb R^n\)</span> 中以下三条性质等价</p>
-<ol>
-<li><span class="arithmatex">\(S\)</span> 有界闭</li>
-<li><span class="arithmatex">\(S\)</span> 紧</li>
-<li><span class="arithmatex">\(S\)</span> 任意点列有收敛子列且极限 <span class="arithmatex">\(\in S\)</span></li>
-</ol>
-<h2 id="91">9.1</h2>
+<h2 id="91-n-euclid">9.1 n 维 Euclid 空间中及基本定理</h2>
 <p><strong>Definition（距离）</strong> 距离满足以下性质：</p>
 <ul>
-<li>正定性：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||\geq 0\)</span>，且 <span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||=0\)</span> 当且仅当 <span class="arithmatex">\(\symbfit{x}=\symbfit{y}\)</span>；</li>
-<li>对称性：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||=||\symbfit{y}-\symbfit{x}||\)</span>；</li>
-<li>三角不等式：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||\leq ||\symbfit{x}-\symbfit{z}||+||\symbfit{z}-\symbfit{y}||\)</span></li>
+<li>正定性：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||\geq 0\)</span>，且 <span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||=0\)</span> 当且仅当 <span class="arithmatex">\(\symbfit{x}=\symbfit{y}\)</span>。</li>
+<li>对称性：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||=||\symbfit{y}-\symbfit{x}||\)</span>。</li>
+<li>三角不等式：<span class="arithmatex">\(||\symbfit{x}-\symbfit{y}||\leq ||\symbfit{x}-\symbfit{z}||+||\symbfit{z}-\symbfit{y}||\)</span>。</li>
 </ul>
 <p><strong>Definition（内点，外点，边界点）</strong></p>
 <ul>
-<li>内点：<span class="arithmatex">\(\exists \delta&gt;0:U(x_0,\delta)\subset E\)</span>，全体内点记为 <span class="arithmatex">\(E^o\)</span></li>
-<li>外点：<span class="arithmatex">\(\exists \delta&gt;0:U(x_0,\delta)\cap E=\varnothing\)</span></li>
-<li>边界点：<span class="arithmatex">\(\forall \delta&gt;0:U(x_0,\delta)\cap E\neq\varnothing\)</span> 且 <span class="arithmatex">\(U(x_0,\delta)\cap E^c\neq\varnothing\)</span></li>
+<li><strong>内点</strong>：<span class="arithmatex">\(\exists \delta&gt;0:U(\symbfit{x}_0,\delta)\subset E\)</span>，全体内点记为 <span class="arithmatex">\(E^{\circ}\)</span>。</li>
+<li><strong>外点</strong>：<span class="arithmatex">\(\exists \delta&gt;0:U(\symbfit{x}_0,\delta)\cap E=\varnothing\)</span>，全体外点记为 <span class="arithmatex">\(E^c\)</span>，称为 <span class="arithmatex">\(E\)</span> 的余集。</li>
+<li><strong>边界点</strong>：<span class="arithmatex">\(\forall \delta&gt;0:U(\symbfit{x}_0,\delta)\cap E\neq\varnothing\)</span> 且 <span class="arithmatex">\(U(x_0,\delta)\cap E^c\neq\varnothing\)</span>，全体边界点记为 <span class="arithmatex">\(\partial E\)</span>。既不是外点又不是内点的点是边界点。</li>
 </ul>
-<p><span class="arithmatex">\(E^c=\mathbb R^n\backslash E\)</span> 称为 <span class="arithmatex">\(E\)</span> 的余集。</p>
-<p>全体边界点记为 <span class="arithmatex">\(\partial E\)</span></p>
-<p>聚点：<span class="arithmatex">\(\forall \delta&gt;0:\sharp(U(x_0,\delta)\cap E)=\infty\)</span></p>
-<p>全体聚点称为导集，记为 <span class="arithmatex">\(E'\)</span></p>
-<p>聚点的充分必要条件：存在互异点列 <span class="arithmatex">\(\{x_k\}\subset E\)</span> 且 <span class="arithmatex">\(x_k\neq x_0\)</span> 使得 <span class="arithmatex">\(\lim_{k\to\infty}x_k=x_0\)</span></p>
-<p>孤立点：<span class="arithmatex">\(\exists \delta&gt;0:U(x_0,\delta)\cap E=x_0\)</span></p>
-<p>开集：<span class="arithmatex">\(E\)</span> 中的点均为 <span class="arithmatex">\(E\)</span> 的内点，即 <span class="arithmatex">\(E=E^o\)</span></p>
-<p>闭集：<span class="arithmatex">\(E\)</span> 中的聚点均属于 <span class="arithmatex">\(E\)</span>，即 <span class="arithmatex">\(E'\subset E\)</span></p>
-<p>闭包：<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(E'\)</span> 的并集，记为 <span class="arithmatex">\(\overline{E}\)</span></p>
-<p>闭集套定理：
-设非空闭集列 <span class="arithmatex">\(\{E_k\}\)</span> 满足：</p>
+<p><strong>Definition（聚点，导集，闭包）</strong> 设点 <span class="arithmatex">\(\symbfit{x}_0\in\mathbb R^n\)</span>，集合 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，若对任意给定的 <span class="arithmatex">\(\delta&gt;0\)</span>，有 <span class="arithmatex">\(\forall \delta&gt;0:\sharp(U(\symbfit{x}_0,\delta)\cap E)=\infty\)</span>，则称 <span class="arithmatex">\(\symbfit{x}_0\)</span> 为 <span class="arithmatex">\(E\)</span> 的<strong>聚点</strong>，<span class="arithmatex">\(E\)</span> 的全体聚点的集合称为 <span class="arithmatex">\(E\)</span> 的<strong>导集</strong>，记为 <span class="arithmatex">\(E'\)</span>。<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(E'\)</span> 的并集称为 <span class="arithmatex">\(E\)</span> 的<strong>闭包</strong>，记为 <span class="arithmatex">\(\overline{E}\)</span>。</p>
+<p><strong>Theorem（聚点的充要条件）</strong> 点 <span class="arithmatex">\(\symbfit{x}_0\)</span> 是集合 <span class="arithmatex">\(E\subset\mathbb R^n\)</span> 的聚点的充分必要条件是：存在互异点列 <span class="arithmatex">\(\{\symbfit{x}_k\}\subset E\)</span> 且 <span class="arithmatex">\(\symbfit{x}_k\neq\symbfit{x}_0(k\in\mathbb N)\)</span> 使得 <span class="arithmatex">\(\lim_{k\to\infty}x_k=x_0\)</span>。</p>
+<p><strong>Definition（孤立点）</strong> 设点 <span class="arithmatex">\(\symbfit{x}_0\in\mathbb R^n\)</span>，若存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得 <span class="arithmatex">\(U(\symbfit{x}_0,\delta)\cap E=\symbfit{x}_0\)</span>，则称 <span class="arithmatex">\(\symbfit{x}_0\)</span> 为 <span class="arithmatex">\(E\)</span> 的<strong>孤立点</strong>。</p>
+<p><strong>Definition（开集，闭集）</strong> 设集合 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，若 <span class="arithmatex">\(E\)</span> 中的点均为 <span class="arithmatex">\(E\)</span> 的内点，即 <span class="arithmatex">\(E=E^{\circ}\)</span>，则称 <span class="arithmatex">\(E\)</span> 为<strong>开集</strong>，若 <span class="arithmatex">\(E\)</span> 的聚点均属于 <span class="arithmatex">\(E\)</span>，即 <span class="arithmatex">\(E'\subset E\)</span>，则称 <span class="arithmatex">\(E\)</span> 为<strong>闭集</strong>。</p>
+<p><strong>Theorem</strong> 设集合 <span class="arithmatex">\(E\subset\mathbb R^n\)</span> 以下四个命题等价：</p>
+<ul>
+<li><span class="arithmatex">\(E\)</span> 为闭集；</li>
+<li><span class="arithmatex">\(E=\overline{E}\)</span>；</li>
+<li>对任意点列 <span class="arithmatex">\(\{x_k\}\subset E\)</span>，若 <span class="arithmatex">\(\lim_{k\to\infty}x_k=x_0\)</span>，则有 <span class="arithmatex">\(x_0\in E\)</span>；</li>
+<li><span class="arithmatex">\(E^c\)</span> 为开集，即若 <span class="arithmatex">\(\symbfit{x}\notin E\)</span>，则存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得 <span class="arithmatex">\(U(\symbfit{x},\delta)\cap E=\varnothing\)</span>。</li>
+</ul>
+<p><strong>Theorem（Cauchy 收敛准则）</strong> <span class="arithmatex">\(\mathbb R^n\)</span> 中的点列 <span class="arithmatex">\(\{\symbfit{x}_k\}\)</span> 收敛的充要条件是 <span class="arithmatex">\(\{\symbfit{x}_k\}\)</span> 为 <strong>Cauchy 点列</strong>（或<strong>基本数列</strong>），即对任意给定的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在 <span class="arithmatex">\(K\in\mathbb N\)</span>，当 <span class="arithmatex">\(k&gt;K\)</span> 时，对任意的 <span class="arithmatex">\(p\in\mathbb N\)</span>，有</p>
+<div class="arithmatex">\[
+    ||\symbfit{x}_{k+p}-x_k||&lt;\varepsilon
+\]</div>
+<p><strong>Theorem（闭集套定理）</strong> 设非空闭集列 <span class="arithmatex">\(\{E_k\}\)</span> 满足：</p>
 <ul>
 <li><span class="arithmatex">\(E_{k+1}\subset E_k(k\in\mathbb N)\)</span></li>
 <li><span class="arithmatex">\(E_k\)</span> 的直径 <span class="arithmatex">\(\text{diam}E_k\to 0(k\to\infty)\)</span></li>
 </ul>
-<p>则存在唯一的点 <span class="arithmatex">\(x\in E_k(\forall k\in\mathbb N)\)</span></p>
-<p>Bolzano-Weierstrass 定理：
-<span class="arithmatex">\(\mathbb R^n\)</span> 中的有界点列 <span class="arithmatex">\(\{x_k\}\)</span> 必有收敛子点列
-聚点定理：
-<span class="arithmatex">\(\mathbb R^n\)</span> 中的有限无限点集至少有一个聚点</p>
-<p>紧集：集合 <span class="arithmatex">\(E\)</span> 的任一开覆盖均存在有限子覆盖</p>
-<p>Heine-Borel 定理：
-设 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，<span class="arithmatex">\(E\)</span> 为紧集的充分必要条件是 <span class="arithmatex">\(E\)</span> 为有界闭集</p>
-<p>Thm: <span class="arithmatex">\(\mathbb R^n\)</span> 中以下三条性质等价:</p>
+<p>则存在唯一的点 <span class="arithmatex">\(x\in E_k(\forall k\in\mathbb N)\)</span>。</p>
+<p><strong>Theorem（Bolzano-Weierstrass 定理）</strong> <span class="arithmatex">\(\mathbb R^n\)</span> 中的有界点列 <span class="arithmatex">\(\{x_k\}\)</span> 必有收敛子点列。</p>
+<p><strong>Theorem（聚点定理）</strong> <span class="arithmatex">\(\mathbb R^n\)</span> 中的有限无限点集至少有一个聚点。</p>
+<p><strong>Definition（紧集）</strong> 集合 <span class="arithmatex">\(E\)</span> 的任一开覆盖均存在有限子覆盖。</p>
+<p><strong>Theorem（Heine-Borel 定理）</strong> 设 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，<span class="arithmatex">\(E\)</span> 为紧集的充分必要条件是 <span class="arithmatex">\(E\)</span> 为有界闭集。</p>
+<p><strong>Theorem</strong>  对于 <span class="arithmatex">\(K\in\mathbb R^n\)</span>，以下三条性质等价:</p>
 <ul>
-<li>K 有界闭</li>
-<li>K 紧</li>
-<li>K 中任意点列必有收敛子列，且收敛的极限 <span class="arithmatex">\(\in K\)</span> (自列紧)</li>
+<li><span class="arithmatex">\(K\)</span> 有界闭；</li>
+<li><span class="arithmatex">\(K\)</span> 紧；</li>
+<li><span class="arithmatex">\(K\)</span> 中任意点列必有收敛子列，且收敛的极限 <span class="arithmatex">\(\in K\)</span> (自列紧)。</li>
 </ul>
-<p>(紧比有界闭强很多)</p>
-<h2 id="92">9.2</h2>
-<p><span class="arithmatex">\(f(D)=\{f(x)|x\in D\}\)</span> 像集
-<span class="arithmatex">\(\Gamma(D)=\{(x,f(x))|x\in D\}\)</span> 图集</p>
-<p>极限：
-设 <span class="arithmatex">\(D\in \mathbb R^n\)</span>，<span class="arithmatex">\(x_0\)</span> 是 <span class="arithmatex">\(D\)</span> 的一个聚点, <span class="arithmatex">\(f:D\backslash\{x_0\}\to\mathbb R^n\)</span>
-若 <span class="arithmatex">\(\exists A\in \mathbb R^n\)</span> s.t. <span class="arithmatex">\(\forall \varepsilon &gt;0\exists\delta&gt;-\forall x\in (B_{\delta}(x_0)\backslash\{x_0\})\cap D:||f(x)-a||&lt;\varepsilon\)</span></p>
-<p>累次极限：二元函数 <span class="arithmatex">\(f:X\times Y\to \mathbb R\)</span>，若任意给定 <span class="arithmatex">\(x\in X\)</span>，首次极限 <span class="arithmatex">\(\lim_{y\to y_0}f(x,y)\)</span> 存在并且极限 <span class="arithmatex">\(\lim_{x\to x_0}\lim_{y\to y_0}f(x,y)\)</span> 存在，则称此极限值为 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\((x_0,y_0)\)</span> 处先 <span class="arithmatex">\(y\)</span> 后 <span class="arithmatex">\(x\)</span> 的累次极限（或二次极限）</p>
-<p>定理：设二元函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 处存在二重极限，即</p>
+<p>(事实上，紧比有界闭强很多)</p>
+<h2 id="92">9.2 多元函数的极限</h2>
+<p><strong>Definition（像集与图集）</strong> <span class="arithmatex">\(f(D)=\{f(x)|x\in D\}\)</span> 称为像集，<span class="arithmatex">\(\Gamma(D)=\{(x,f(x))|x\in D\}\)</span> 称为图集。</p>
+<p><strong>Definition（极限）</strong> 设 <span class="arithmatex">\(D\in \mathbb R^n\)</span>，<span class="arithmatex">\(\symbfit{x}_0\)</span> 是 <span class="arithmatex">\(D\)</span> 的一个聚点，<span class="arithmatex">\(\symbfit{f}:D\backslash\{\symbfit{x}_0\}\to\mathbb R^m\)</span>, 若</p>
+<div class="arithmatex">\[
+\exists A\in \mathbb R^m,\forall \varepsilon &gt;0,\exists\delta&gt;0,\forall x\in (B_{\delta}(\symbfit{x}_0)\backslash\{\symbfit{x}_0\})\cap D:||\symbfit{f}(\symbfit{x})-\symbfit{a}||&lt;\varepsilon
+\]</div>
+<p>则称当 <span class="arithmatex">\(\symbfit{x}\)</span> 趋于 <span class="arithmatex">\(\symbfit{x}_0\)</span> 时，函数 <span class="arithmatex">\(\symbfit{f}(\symbfit{x})\)</span> 的 <span class="arithmatex">\(n\)</span> 重<strong>极限</strong>为 <span class="arithmatex">\(A\)</span>，记为</p>
+<div class="arithmatex">\[
+    \lim_{\symbfit{x}\to\symbfit{x}_0}\symbfit{f}(\symbfit{x})=A
+\]</div>
+<p>多元函数极限也有：唯一性，局部有界性，局部保号性，夹逼性，四则运算等性质。</p>
+<p>向量值函数存在极限当且仅当其每一个分量函数存在极限。</p>
+<p><strong>Remark</strong> 若 <span class="arithmatex">\(\symbfit{f}\)</span> 在 <span class="arithmatex">\(\symbfit{x}_0\)</span> 处极限存在，则无论自变量 <span class="arithmatex">\(\symbfit{x}\)</span> 以何种路径趋于 <span class="arithmatex">\(\symbfit{x}_0\)</span>，其函数值都趋于同一极限值。</p>
+<p><strong>Definition（累次极限）</strong> 二元函数 <span class="arithmatex">\(f:X\times Y\to \mathbb R\)</span>，若任意给定 <span class="arithmatex">\(x\in X\)</span>，首次极限 <span class="arithmatex">\(\lim_{y\to y_0}f(x,y)\)</span> 存在并且极限 <span class="arithmatex">\(\lim_{x\to x_0}\lim_{y\to y_0}f(x,y)\)</span> 存在，则称此极限值为 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\((x_0,y_0)\)</span> 处先 <span class="arithmatex">\(y\)</span> 后 <span class="arithmatex">\(x\)</span> 的累次极限（或二次极限）。</p>
+<p>二重极限不能保证二次极限存在，二次极限存在也不能保证二次极限存在。</p>
+<p><strong>Theorem（二重极限存在+首次极限存在-&gt;二次极限存在且相等）</strong> 设二元函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 处存在二重极限，即</p>
 <div class="arithmatex">\[
     \lim_{(x,y)\to(x_0,y_0)}f(x,y)=A
 \]</div>
@@ -1289,19 +1335,38 @@
 <div class="arithmatex">\[
     \lim_{x\to x_0}\lim_{y\to y_0}f(x,y)=\lim_{(x,y)\to(x_0,y_0)} f(x, y)=A
 \]</div>
-<p>推论：
-若 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的两个二次极限与二重极限均存在，则三者必相等。
-若 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的两次二次极限存在但不相等，则二重极限必不存在</p>
-<p>多元映射极限具有：
-唯一性、局部有界性、局部保号性、夹逼性、四则运算</p>
-<p>还可以用另一种方式定义极限
-设 <span class="arithmatex">\(f:D\subset\mathbb R^n\to \mathbb R\)</span></p>
-<p>连续性
-Def 设 <span class="arithmatex">\(f:D\in\mathbb R^n\longrightarrow \mathbb R^m\)</span>, 若 <span class="arithmatex">\(\forall\varepsilon &gt;0,\exists\delta&gt;0,\forall x\in B_{\delta}(x)\cap D:||f(x)-f(x_0)||&lt;\varepsilon\)</span>, 称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x_0\)</span> 出连续，记 <span class="arithmatex">\(f\in C(D,\mathbb R^m)\)</span></p>
-<p><span class="arithmatex">\(f\)</span> 连续，<span class="arithmatex">\(f(\text{紧})=\text{紧}\)</span>，<span class="arithmatex">\(f(\text{连通})=\text{连通}\)</span>，<span class="arithmatex">\(f(\text{道路联通})=\text{道路联通}\)</span></p>
-<p>Thm（Cantor） 设<span class="arithmatex">\(f\in C(K,\mathbb R^m)\)</span>, <span class="arithmatex">\(K\)</span> 紧，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(K\)</span> 上一致连续。
-Def（道路）设 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，若 <span class="arithmatex">\(\forall x,y\in E,\exists E\)</span> 中的道路 <span class="arithmatex">\(\gamma\)</span> 连接 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，称 <span class="arithmatex">\(E\)</span> 为道路联通集。
-Thm 设 <span class="arithmatex">\(f\in C(E,\mathbb R^m)\)</span>，<span class="arithmatex">\(E\)</span> 道路连通，则 <span class="arithmatex">\(f(E)\)</span> 道路连通。</p>
+<p><strong>Corollary</strong> 若 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的两个二次极限与二重极限均存在，则三者必相等；若 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的两次二次极限存在但不相等，则二重极限必不存在。</p>
+<!-- 还可以用另一种方式定义极限
+设 $f:D\subset\mathbb R^n\to \mathbb R$ -->
+
+<h2 id="93">9.3 多元函数的连续性</h2>
+<p><strong>Definition（连续）</strong> 设 <span class="arithmatex">\(\symbfit{f}:D\in\mathbb R^n\longrightarrow \mathbb R^m\)</span>, 若满足</p>
+<div class="arithmatex">\[
+\forall\varepsilon &gt;0,\exists\delta&gt;0,\forall \symbfit{x}\in B_{\delta}(\symbfit{x})\cap D:||\symbfit{f}(\symbfit{x})-\symbfit{f}(\symbfit{x}_0)||&lt;\varepsilon
+\]</div>
+<p>, 称 <span class="arithmatex">\(\symbfit{f}\)</span> 在 <span class="arithmatex">\(\symbfit{x}_0\)</span> 处<strong>连续</strong>。</p>
+<p>向量值函数连续的充分必要条件是每一个分量函数连续。</p>
+<p><strong>Theorem</strong> 设集合 <span class="arithmatex">\(X\times Y\subset\mathbb R^2\)</span>，设函数 <span class="arithmatex">\(f:X\times Y\to\mathbb R\)</span>，若 <span class="arithmatex">\(f(x,y)\)</span> 对自变量 <span class="arithmatex">\(x\in X\)</span> 连续（视 <span class="arithmatex">\(y\)</span> 为常数）；又对自变量 <span class="arithmatex">\(y\)</span> 满足 Lipschitz 条件，即存在常数 <span class="arithmatex">\(L&gt;0\)</span>，使得对任意给定的 <span class="arithmatex">\((x,y'),(x,y'')\in X\times Y\)</span>，成立不等式</p>
+<div class="arithmatex">\[
+    |f(x,y')-f(x,y'')|\leq L|y'-y''|
+\]</div>
+<p>那么 <span class="arithmatex">\(f\in C(X\times Y)\)</span>。</p>
+<p><strong>Theorem（连续函数的复合映射连续）</strong> 若映射 <span class="arithmatex">\(\symbfit{g}\)</span> 在 <span class="arithmatex">\(D\)</span> 上连续，<span class="arithmatex">\(\symbfit{f}\)</span> 在 <span class="arithmatex">\(\Omega\)</span> 上连续，则复合映射 <span class="arithmatex">\(f\circ g\)</span> 在 <span class="arithmatex">\(D\)</span> 上连续。</p>
+<p><strong>Definition（一致连续）</strong> 设集合 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，映射 <span class="arithmatex">\(\symbfit{f}:D\to\mathbb R^m\)</span>。若对任意给定的 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在 <span class="arithmatex">\(\delta&gt;0\)</span>，当 <span class="arithmatex">\(\symbfit{x}',\symbfit{x}''\in D\)</span> 且 <span class="arithmatex">\(||\symbfit{x}'-\symbfit{x}''||&lt;\delta\)</span> 时，有</p>
+<div class="arithmatex">\[
+    ||\symbfit{f}(\symbfit{x}')-\symbfit{f}(\symbfit{x}'')||&lt;\varepsilon
+\]</div>
+<p>则称映射 <span class="arithmatex">\(\symbfit{f}\)</span> 在点 <span class="arithmatex">\(D\)</span> 上<strong>一致连续</strong>。</p>
+<h2 id="94">9.4 连续函数的性质</h2>
+<p><span class="arithmatex">\(\symbfit{f}\)</span> 连续，<span class="arithmatex">\(\symbfit{f}(\text{紧})=\text{紧}\)</span>，<span class="arithmatex">\(\symbfit{f}(\text{连通})=\text{连通}\)</span>，<span class="arithmatex">\(\symbfit{f}(\text{道路连通})=\text{道路连通}\)</span>。</p>
+<p><strong>Theorem（紧性在连续映射下保持不变）</strong> 设紧集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，映射 <span class="arithmatex">\(f:D\to\mathbb R^m\)</span> 连续，则 <span class="arithmatex">\(f(D)\)</span> 是 <span class="arithmatex">\(\mathbb R^m\)</span> 中的紧集。</p>
+<p><strong>Theorem（有界性）</strong> 设紧集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，函数 <span class="arithmatex">\(f:D\to\mathbb R\)</span> 连续，则 <span class="arithmatex">\(f\)</span> 是有界的。</p>
+<p><strong>Theorem（最值性）</strong> 设紧集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，函数 <span class="arithmatex">\(f:D\to\mathbb R\)</span> 连续，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(D\)</span> 上有最大值和最小值。</p>
+<p><strong>Theorem（Cantor）</strong> 设紧集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，函数 <span class="arithmatex">\(f:D\to\mathbb R\)</span> 连续，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(D\)</span> 上一致连续。</p>
+<p><strong>Theorem（道路连通）</strong> 设点集 <span class="arithmatex">\(E\subset\mathbb R^n\)</span>，若连续映射 <span class="arithmatex">\(\symbfit{\gamma}:[a,b]\to\mathbb R^n\)</span> 的值域包含于 <span class="arithmatex">\(E\)</span>，即 <span class="arithmatex">\(\symbfit{\gamma}([a,b])\subset E\)</span>，则称 <span class="arithmatex">\(\symbfit{\gamma}\)</span> 是 <span class="arithmatex">\(E\)</span> 中的<strong>连续曲线</strong>（或<strong>道路</strong>）。若对任意的两点 <span class="arithmatex">\(\symbfit{a},\symbfit{b}\in E\)</span>，都存在 <span class="arithmatex">\(E\)</span> 中起点为 <span class="arithmatex">\(\symbfit{a}\)</span>，终点为 <span class="arithmatex">\(\symbfit{b}\)</span> 的道路，则称点集 <span class="arithmatex">\(E\)</span> 是<strong>道路连通</strong>的，或称 <span class="arithmatex">\(E\)</span> 为<strong>连通集</strong>。连通开集称为<strong>区域</strong>或<strong>开区域</strong>，连通闭集称为<strong>闭区域</strong>。</p>
+<p>Remark：所以说如果看到“区域”，就要想到是道路连通的开集。</p>
+<p><strong>Theorem（连通性在连续映射下保持不变）</strong> 设连通集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，映射 <span class="arithmatex">\(\symbfit{f}:D\to\mathbb R^m\)</span> 连续，则 <span class="arithmatex">\(\symbfit{f}(D)\)</span> 是 <span class="arithmatex">\(\mathbb R^m\)</span> 中的连通集。</p>
+<p><strong>Theorem（介值性）</strong> 设连通紧集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，函数 <span class="arithmatex">\(f:D\to\mathbb R\)</span> 连续，设 <span class="arithmatex">\(f\)</span> 的最大值为 <span class="arithmatex">\(M\)</span>，最小值 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(f\)</span> 的值域 <span class="arithmatex">\(f(D)\)</span> 为闭区间 <span class="arithmatex">\([m,M]\)</span>。</p>
 <h2 id="notes">Notes</h2>
 <p>距离 -&gt; 邻域 -&gt; 有了邻域就可以考虑内点这些东西</p>
 <p>点的极限 边界点定义 导集定义 孤立点</p>
