@@ -12,7 +12,7 @@
         <link rel="prev" href="../9/">
       
       
-        <link rel="next" href="../../probability_theory/">
+        <link rel="next" href="../../physics/wave/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
@@ -717,8 +717,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#104" class="md-nav__link">
-    10.4 偏导数在几何中的应用
+  <a href="#104-important" class="md-nav__link">
+    10.4 偏导数在几何中的应用 ☆Important!
   </a>
   
 </li>
@@ -769,12 +769,60 @@
       
       
         <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
-          概率论
+          物理学引论
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          物理学引论
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/wave/" class="md-nav__link">
+        波动
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+          概率论
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           概率论
         </label>
@@ -1161,8 +1209,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#104" class="md-nav__link">
-    10.4 偏导数在几何中的应用
+  <a href="#104-important" class="md-nav__link">
+    10.4 偏导数在几何中的应用 ☆Important!
   </a>
   
 </li>
@@ -1234,6 +1282,8 @@
     \mathrm{d}f\big|_{(x_0,y_0)}=f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y
 \]</div>
 <p><strong>Lemma（可微的充分条件）</strong> 若函数 <span class="arithmatex">\(z=f(x,y)\)</span> 的偏导数在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的某邻域内存在，且偏导数在 <span class="arithmatex">\((x_0,y_0)\)</span> 处连续，则函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 处可微。</p>
+<p><strong>Proposition（偏导数、可微、连续的关系）</strong></p>
+<p><img alt="" src="../10-1.png" /></p>
 <p><strong>Definition（向量值函数微分）</strong> 设 <span class="arithmatex">\(\symbfit{f}:D\subset\mathbb R^n\to\mathbb R^m\)</span>, <span class="arithmatex">\(\symbfit{x}_0\)</span> 是<span class="arithmatex">\(D\)</span> 的内点，若 <span class="arithmatex">\(\exists A\in M_{m\times n}(\mathbb R)\equiv \mathbb R^{m\times n}\)</span>，<span class="arithmatex">\(\symbfit{f}(\symbfit{x}_0+\Delta \symbfit{x})=\symbfit{f}(\symbfit{x}_0)+A\Delta \symbfit{x}+o(\Delta \symbfit{x})\)</span> 称 <span class="arithmatex">\(\symbfit{f}\)</span> 在 <span class="arithmatex">\(\symbfit{x}_0\)</span> 处可微，称 <span class="arithmatex">\(\symbfit{f}'(\symbfit{x}_0):\mathbb R^n\to\mathbb R^m\)</span> 为 <span class="arithmatex">\(\symbfit{f}\)</span> 在 <span class="arithmatex">\(\symbfit{x}_0\)</span> 处的微分。<span class="arithmatex">\(\mathrm{d}\symbfit{f}(\symbfit{x}_0)=\sum_{i=1}^n A^i(\symbfit{x}_0)\mathrm{d}\symbfit{x}^i\)</span></p>
 <p><strong>Definition（向量值函数的偏导数）</strong> 若 <span class="arithmatex">\(\symbfit{f}\)</span> 的每一个分量函数 <span class="arithmatex">\(f_i(x_1,x_2,...,x_n)(i=1,2,...,m)\)</span> 都在 <span class="arithmatex">\(\symbfit{x}_0\)</span> 点的可偏导，就称 <strong>向量值函数</strong> <span class="arithmatex">\(\symbfit{f}\)</span> 在 <span class="arithmatex">\(\symbfit{x}_0\)</span> 点<strong>可偏导</strong>，并称矩阵</p>
 <div class="arithmatex">\[
@@ -1328,6 +1378,7 @@ $$ -->
     \frac{\text{d}y}{\text{d}x}=-\frac{F_x(x,y)}{F_y(x,y)}
 \]</div>
 <p>（这是充分条件，不是必要条件）</p>
+<p>注意四个条件：闭矩形；在该点 <span class="arithmatex">\(F(x_0,y_0)=0\)</span>；<span class="arithmatex">\(F_y(x_0,y_0)\neq 0\)</span>；连续且偏导连续。</p>
 <p><strong>定理 10.3.3（隐映射）</strong> 设函数 <span class="arithmatex">\(F(x,y,u,v)\)</span>, <span class="arithmatex">\(G(x,y,u,v)\)</span> 满足如下条件：</p>
 <ol>
 <li>在 <span class="arithmatex">\((x_0,y_0,u_0,v_0)\)</span> 的某一邻域内，<span class="arithmatex">\(F\)</span>，<span class="arithmatex">\(G\)</span> 对具有连续偏导数；</li>
@@ -1347,8 +1398,10 @@ $$ -->
 <div class="arithmatex">\[
     \frac{\mathrm{d}x}{\mathrm{d}y}=\frac{1}{f'(x)}
 \]</div>
-<h2 id="104">10.4 偏导数在几何中的应用</h2>
-<p><span class="arithmatex">\(x(t),y(t),z(t)\)</span> 具有连续的导数，且 <span class="arithmatex">\(x'^2(t)+y'^2(t)+z'^2(t)\neq 0\)</span>，此时称 <span class="arithmatex">\(\Gamma\)</span> 为<strong>光滑正则曲线</strong>。</p>
+<h2 id="104-important">10.4 偏导数在几何中的应用 ☆Important!</h2>
+<p><strong>Definition（光滑正则曲线）</strong> <span class="arithmatex">\(x(t),y(t),z(t)\)</span> 具有连续的导数，且 <span class="arithmatex">\(x'^2(t)+y'^2(t)+z'^2(t)\neq 0\)</span>，此时称 <span class="arithmatex">\(\Gamma\)</span> 为<strong>光滑正则曲线</strong>。</p>
+<p>所以说，像是 <span class="arithmatex">\(\left\{\begin{aligned}x=t^3\\y=t^3\\z=t^3\end{aligned}\right.\)</span> 这种东西不能算是光滑正则曲线。</p>
+<p><strong>Formula（切线与法平面）</strong></p>
 <p><span class="arithmatex">\(\Gamma\)</span> 在点 <span class="arithmatex">\(M_0\)</span> 处的切线方程是</p>
 <div class="arithmatex">\[
     \frac{x-x_0}{x(t_0+\Delta t)-x(t_0)}=\frac{y-y_0}{y(t_0+\Delta t)-y(t_0)}=\frac{z-z_0}{z(t_0+\Delta t)-z(t_0)}
@@ -1361,7 +1414,9 @@ $$ -->
 <div class="arithmatex">\[
     x'(t_0)(x-x_0)+y'(t_0)(y-y_0)+z'(t_0)(z-z_0)=0
 \]</div>
-<p>偏导数 <span class="arithmatex">\(F_x,F_y,F_z\)</span> 连续，且 <span class="arithmatex">\(F_x^2+F_y^2+F_z^2\neq 0\)</span>，此时称 <span class="arithmatex">\(S\)</span> 为光滑正则曲面。</p>
+<p><strong>Definition（光滑正则曲面）</strong></p>
+<p>偏导数 <span class="arithmatex">\(F_x,F_y,F_z\)</span> 连续，且 <span class="arithmatex">\(F_x^2+F_y^2+F_z^2\neq 0\)</span>，此时称 <span class="arithmatex">\(S:F(x,y,z)=0\)</span> 为<strong>光滑正则曲面</strong>。</p>
+<p><strong>Formula（切平面与法线）</strong></p>
 <p>曲面 <span class="arithmatex">\(S\)</span> 在 <span class="arithmatex">\(M_0\)</span> 处的法向量为</p>
 <div class="arithmatex">\[
 \symbfit{n}=\nabla F(M_0)=(F_x(M_0),F_y(M_0),F_z(M_0))
@@ -1374,13 +1429,23 @@ $$ -->
 <div class="arithmatex">\[
     \frac{x-x_0}{F_x(M_0)}=\frac{y-y_0}{F_y(M_0)}=\frac{z-z_0}{F_z(M_0)}
 \]</div>
+<p><strong>Formula（两平面的交线）</strong></p>
+<p>若空间曲线 <span class="arithmatex">\(\Gamma\)</span> 是曲面 <span class="arithmatex">\(S_1:F(x,y,z)=0\)</span> 和 <span class="arithmatex">\(S_2:G(x,y,z)=0\)</span> 的交线，它在其上一点 <span class="arithmatex">\(M_0\)</span> 处的切线同时落在 <span class="arithmatex">\(S_1\)</span> 和 <span class="arithmatex">\(S_2\)</span> 在 <span class="arithmatex">\(M_0\)</span> 处的切平面上，所以曲线 <span class="arithmatex">\(\Gamma\)</span> 在点 <span class="arithmatex">\(M_0\)</span> 处的切线就是 <span class="arithmatex">\(S_1\)</span> 和 <span class="arithmatex">\(S_2\)</span> 在点 <span class="arithmatex">\(M_0\)</span> 处的切平面的交线。若 <span class="arithmatex">\(S_1\)</span> 和 <span class="arithmatex">\(S_2\)</span> 在点 <span class="arithmatex">\(M_0\)</span> 处的法向量分别为 <span class="arithmatex">\(\symbfit{n}_1\)</span> 和 <span class="arithmatex">\(\symbfit{n}_2\)</span>，那么 <span class="arithmatex">\(\symbfit{n}_1\times\symbfit{n}_2\)</span> 就是 <span class="arithmatex">\(\Gamma\)</span> 在 <span class="arithmatex">\(M_0\)</span> 处的切向量。</p>
+<p><strong>Formula（平面曲线的切线）</strong></p>
+<p>切线方程为</p>
+<div class="arithmatex">\[
+    F_x(x_0,y_0)(x-x_0)+F_y(x_0,y_0)(y-y_0)=0
+\]</div>
 <h2 id="105-taylor">10.5 Taylor 公式与极值</h2>
 <p>若取区域 <span class="arithmatex">\(D\subset\mathbb R^2\)</span> 内任意两点的连线都包含于 <span class="arithmatex">\(D\)</span></p>
 <p><strong>定理 10.5.1（微分中值定理）</strong> 设函数 <span class="arithmatex">\(f(x,y)\)</span> 在凸区域 <span class="arithmatex">\(D\)</span> 内可微，则对 <span class="arithmatex">\(D\)</span> 中的任意两点 <span class="arithmatex">\(P(a,b)\)</span>，<span class="arithmatex">\(Q(a+h,b+k)\)</span>，存在 <span class="arithmatex">\(\theta\in(0,1)\)</span> 使得</p>
 <div class="arithmatex">\[
     f(a+h,b+h)-f(a,b)=f_x(a+\theta h,b+\theta  k)h+f_y(a+\theta h,b+\theta k)k
 \]</div>
-<p>对于一般区域（道路连通开集）也成立。</p>
+<!-- 对于一般区域（道路连通开集）也成立。 -->
+
+<p><strong>Corollary</strong> 设函数 <span class="arithmatex">\(f(x,y)\)</span> 在凸区域 <span class="arithmatex">\(D\)</span> 内可微，且对任意的 <span class="arithmatex">\((x,y)\in D\)</span>，其偏导数 <span class="arithmatex">\(f_x(x,y)\equiv 0\)</span>，<span class="arithmatex">\(f_y(x,y)\equiv 0\)</span>，则 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\(D\)</span> 内为常值函数。（对于一般区域也成立）</p>
+<p>remark：对向量值函数，没有相应的微分中值定理。</p>
 <p><strong>定理 10.5.2（Taylor）</strong> 设函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\((x_0,y_0)\)</span> 的某邻域内有 <span class="arithmatex">\(n+1\)</span> 阶连续偏导数，则对该邻域内任一点 <span class="arithmatex">\((x_0+h,y_0+k)\)</span>，存在 <span class="arithmatex">\(\theta\in(0,1)\)</span>，使得</p>
 <div class="arithmatex">\[
     f(x_0+h,y_0+k)=\sum_{m=0}^n\frac{1}{m!}\left(\frac{\partial}{\partial x}h+\frac{\partial}{\partial y}k\right)^mf(x_0,y_0)+R_n
@@ -1389,11 +1454,18 @@ $$ -->
 <div class="arithmatex">\[
     R_n=\frac{1}{(n+1)!}\left(\frac{\partial}{\partial x}h+\frac{\partial}{\partial y}k\right)^{n+1}f(x_0+\theta h,y_0+\theta k)
 \]</div>
+<p>（Lagrange 余项）</p>
+<div class="arithmatex">\[
+    R_n=o(r^n)
+\]</div>
+<p>（Peano 余项）</p>
+<p><strong>补充（无穷小增量公式）</strong> <span class="arithmatex">\(f(x)=f(x_0)+(\frac{\partial f_i}{x_j}(x_0))_{m\times n}(x-x_0)+o(x-x_0)\)</span></p>
+<p><strong>补充（拟微分平均值定理）</strong> <span class="arithmatex">\(|f(b)-f(a)|\leq ||J f(a+\theta(b-a))||\cdot|b-a|\)</span></p>
 <p><strong>定理 10.5.4（必要条件）</strong> 若函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\(P_0(x_0,y_0)\)</span> 可偏导，且在 <span class="arithmatex">\(P_0\)</span> 点取极值，则有</p>
 <div class="arithmatex">\[
     f_x(x_0,y_0)=0,f_y(x_0,y_0)=0
 \]</div>
-<p>函数的一阶偏导数都为零的点称为驻点.</p>
+<p>函数的一阶偏导数都为零的点称为<strong>驻点</strong>.</p>
 <p><strong>定理 10.5.5（充分条件）</strong> 设函数 <span class="arithmatex">\(f(x,y)\)</span> 在点 <span class="arithmatex">\(P_0(x_0,y_0)\)</span> 某邻域有二阶连续的偏导数，且</p>
 <div class="arithmatex">\[
     f_x(x_0,y_0)=0,f_y(x_0,y_0)=0
@@ -1402,8 +1474,10 @@ $$ -->
 <div class="arithmatex">\[
     \symbfit{H}=\begin{bmatrix}f_{xx} &amp; f_{xy}\\f_{yx} &amp; f_{yy}\end{bmatrix}_{P_0}
 \]</div>
-<p>(1) 若 <span class="arithmatex">\(\symbfit{H}\)</span> 为正定矩阵（当 <span class="arithmatex">\(|\symbfit{H}|&gt;0\)</span> 且 <span class="arithmatex">\(f_{xx}(x_0,y_0)&gt;0\)</span>），则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 为严格极小值；若<span class="arithmatex">\(\symbfit{H}\)</span> 为负定矩阵（当 <span class="arithmatex">\(|\symbfit{H}|&gt;0\)</span> 且 <span class="arithmatex">\(f_{xx}(x_0,y_0)&lt;0\)</span>），则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 为严格极大值。
-(2) 若 <span class="arithmatex">\(\symbfit{H}\)</span> 为不定矩阵，则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 非极值。（当 <span class="arithmatex">\(|\symbfit{H}|&lt;0\)</span>）</p>
+<ol>
+<li>若 <span class="arithmatex">\(\symbfit{H}\)</span> 为正定矩阵（当 <span class="arithmatex">\(|\symbfit{H}|&gt;0\)</span> 且 <span class="arithmatex">\(f_{xx}(x_0,y_0)&gt;0\)</span>），则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 为严格极小值；若<span class="arithmatex">\(\symbfit{H}\)</span> 为负定矩阵（当 <span class="arithmatex">\(|\symbfit{H}|&gt;0\)</span> 且 <span class="arithmatex">\(f_{xx}(x_0,y_0)&lt;0\)</span>），则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 为严格极大值。</li>
+<li>若 <span class="arithmatex">\(\symbfit{H}\)</span> 为不定矩阵，则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 非极值。（当 <span class="arithmatex">\(|\symbfit{H}|&lt;0\)</span>）</li>
+</ol>
 <p><strong>定理 10.5.6（条件极值的必要条件）</strong> 若点 <span class="arithmatex">\(x^0=(x_1^0,x_2^0,\cdots,x_n^0)\)</span> 是条件极值问题的极值点，则存在 <span class="arithmatex">\(m\)</span> 个常数 <span class="arithmatex">\(\lambda_1,\lambda_2,...,\lambda_m\)</span>，使得在点 <span class="arithmatex">\(x^0\)</span> 处成立</p>
 <div class="arithmatex">\[
     \mathbf{grad}f=\lambda_1\mathbf{grad}\varphi_1+...+\lambda_m\mathbf{grad}\varphi_m
@@ -1459,13 +1533,13 @@ $$ -->
         
         
           
-          <a href="../../probability_theory/" class="md-footer__link md-footer__link--next" aria-label="下一页: 概率论" rel="next">
+          <a href="../../physics/wave/" class="md-footer__link md-footer__link--next" aria-label="下一页: 波动" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                概率论
+                波动
               </div>
             </div>
             <div class="md-footer__button md-icon">
