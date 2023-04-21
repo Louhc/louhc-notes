@@ -962,12 +962,102 @@
       
       
         <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
-          格密码学
+          RSA
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          RSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../crypto/rsa/" class="md-nav__link">
+        RSA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../crypto/rsa/low-exp/" class="md-nav__link">
+        Low Exponent Attack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../crypto/rsa/coppersmith/" class="md-nav__link">
+        Coppersmith Attack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../crypto/rsa/related/" class="md-nav__link">
+        Related Message Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          格密码学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           格密码学
         </label>
@@ -1312,6 +1402,9 @@
 <li><span class="arithmatex">\(K\)</span> 中任意点列必有收敛子列，且收敛的极限 <span class="arithmatex">\(\in K\)</span> (自列紧)。</li>
 </ul>
 <p>(事实上，紧比有界闭强很多)</p>
+<blockquote>
+<p>一个有界闭但是不紧的例子：在 <span class="arithmatex">\(\mathbb R^{\infty}\)</span> 中，<span class="arithmatex">\(E=\{(x_1,x_2,...)|\sum_{i\geq 1}x_i=k\}\)</span>，其中 <span class="arithmatex">\(k\)</span> 为一个常数，则 <span class="arithmatex">\(E\)</span> 有界闭，但是不紧。</p>
+</blockquote>
 <h2 id="92">9.2 多元函数的极限</h2>
 <p><strong>Definition（像集与图集）</strong> <span class="arithmatex">\(f(D)=\{f(x)|x\in D\}\)</span> 称为像集，<span class="arithmatex">\(\Gamma(D)=\{(x,f(x))|x\in D\}\)</span> 称为图集。</p>
 <p><strong>Definition（极限）</strong> 设 <span class="arithmatex">\(D\in \mathbb R^n\)</span>，<span class="arithmatex">\(\symbfit{x}_0\)</span> 是 <span class="arithmatex">\(D\)</span> 的一个聚点，<span class="arithmatex">\(\symbfit{f}:D\backslash\{\symbfit{x}_0\}\to\mathbb R^m\)</span>, 若</p>
@@ -1367,6 +1460,13 @@
 <p>Remark：所以说如果看到“区域”，就要想到是道路连通的开集。</p>
 <p><strong>Theorem（连通性在连续映射下保持不变）</strong> 设连通集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，映射 <span class="arithmatex">\(\symbfit{f}:D\to\mathbb R^m\)</span> 连续，则 <span class="arithmatex">\(\symbfit{f}(D)\)</span> 是 <span class="arithmatex">\(\mathbb R^m\)</span> 中的连通集。</p>
 <p><strong>Theorem（介值性）</strong> 设连通紧集 <span class="arithmatex">\(D\subset\mathbb R^n\)</span>，函数 <span class="arithmatex">\(f:D\to\mathbb R\)</span> 连续，设 <span class="arithmatex">\(f\)</span> 的最大值为 <span class="arithmatex">\(M\)</span>，最小值 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(f\)</span> 的值域 <span class="arithmatex">\(f(D)\)</span> 为闭区间 <span class="arithmatex">\([m,M]\)</span>。</p>
+<p><strong>Theorem</strong> 下述几个条件等价</p>
+<ul>
+<li><span class="arithmatex">\(f\)</span> 是连续函数；</li>
+<li>开集的原像是开集；</li>
+<li>闭集的原像是闭集；</li>
+<li><span class="arithmatex">\(f(\overline{E})=\overline{f(E)}\)</span>。</li>
+</ul>
 <h2 id="notes">Notes</h2>
 <p>距离 -&gt; 邻域 -&gt; 有了邻域就可以考虑内点这些东西</p>
 <p>点的极限 边界点定义 导集定义 孤立点</p>
