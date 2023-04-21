@@ -1305,6 +1305,13 @@
 <p>设 <span class="arithmatex">\(f(x)=x^3-c_1\)</span>，<span class="arithmatex">\(g(x)=(ax+b)^3-c_2\)</span>，可以发现，<span class="arithmatex">\(m_1\)</span> 是这两个函数的零点，也就是说这两个多项式都能被 <span class="arithmatex">\((x-m)\)</span> 整除。</p>
 <p>由于 <span class="arithmatex">\(b\neq 0\)</span>，因此 <span class="arithmatex">\(\mathrm{deg}(\mathrm{gcd}(f,g))\neq 3\)</span>。（<span class="arithmatex">\(\mathrm{deg}\)</span> 表示度数）</p>
 <p>因为 RSA 是一个双射，<span class="arithmatex">\(x^3-c_1\equiv 0(\mod n)\)</span> 只有一个解，因此 <span class="arithmatex">\(f=(x-m_1)(x^2+px+q)\)</span>，而 <span class="arithmatex">\((x-m_1)| g\)</span>，于是 <span class="arithmatex">\(\mathrm{deg}(\mathrm{gcd}(f,g))=x-m_1\)</span>。</p>
+<p>因此，只要求出 <span class="arithmatex">\(\mathrm{gcd}(f,g)\)</span>，就得到了 <span class="arithmatex">\(m_1\)</span>，这可以用一种类似于辗转相除的方法求解。</p>
+<ol>
+<li>用 <span class="arithmatex">\(g\)</span> 消去 <span class="arithmatex">\(f\)</span> 的 <span class="arithmatex">\(x^3\)</span> 项，得到 <span class="arithmatex">\(f'\)</span>；</li>
+<li>用 <span class="arithmatex">\(f'\)</span> 消去 <span class="arithmatex">\(g\)</span> 的 <span class="arithmatex">\(x^3\)</span> 项，得到 <span class="arithmatex">\(g'\)</span>；</li>
+<li>用 <span class="arithmatex">\(g'\)</span> 消去 <span class="arithmatex">\(f'\)</span> 的 <span class="arithmatex">\(x^2\)</span> 项，得到 <span class="arithmatex">\(f''\)</span>；</li>
+<li><span class="arithmatex">\(f''\)</span> 为 <span class="arithmatex">\(px+q\)</span> 的形式，<span class="arithmatex">\(m_1\)</span> 即为 <span class="arithmatex">\(-\frac{q}{p}(\mod n)\)</span>。</li>
+</ol>
 
 
 
