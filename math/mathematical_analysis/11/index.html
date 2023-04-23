@@ -739,6 +739,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    11.3 三重积分的计算
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1550,6 +1557,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    11.3 三重积分的计算
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1582,29 +1596,58 @@
 </blockquote>
 <p><strong>Theorem</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\times [c,d]\)</span> 上可积，且对 <span class="arithmatex">\(\forall x\in[a,b]\)</span> 存在首次积分 <span class="arithmatex">\(F(x)=\int_{c}^{d}f(x,y)\mathrm{d}y\)</span>，则</p>
 <div class="arithmatex">\[
-    \int\int_{[a,b]\times[c,d]}f(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_c^df(x,y)\mathrm{d}y
+    \iint_{[a,b]\times[c,d]}f(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_c^df(x,y)\mathrm{d}y
 \]</div>
 <p><strong>Corollary</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\times[c,d]\)</span> 上连续，则有</p>
 <div class="arithmatex">\[
-    \int\int_{[a,b]\times[c,d]}f(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_c^df(x,y)\mathrm{d}y=\int_c^d\mathrm{d}y\int_a^bf(x,y)\mathrm{d}x
+    \iint_{[a,b]\times[c,d]}f(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_c^df(x,y)\mathrm{d}y=\int_c^d\mathrm{d}y\int_a^bf(x,y)\mathrm{d}x
 \]</div>
 <p><strong>Corollary</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\times[c,d]\)</span> 上连续，<span class="arithmatex">\(g(y)\)</span> 在 <span class="arithmatex">\([c,d]\)</span> 上连续，记 <span class="arithmatex">\(D=[a,b]\times [c,d]\)</span>，则有</p>
 <div class="arithmatex">\[
-    \int\int_{D}f(x)g(y)\mathrm{d}\sigma=\int_a^bf(x)\mathrm{d}x\int_c^dg(y)\mathrm{d}y
+    \iint_{D}f(x)g(y)\mathrm{d}\sigma=\int_a^bf(x)\mathrm{d}x\int_c^dg(y)\mathrm{d}y
 \]</div>
 <p><strong>Corollary</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 型区域 <span class="arithmatex">\(D=\{(x,y)|a\leq x\leq b,y_1(x)\leq y\leq y_2(x)\}\)</span> 上连续，其中 <span class="arithmatex">\(y_1(x),y_2(x)\)</span> 是 <span class="arithmatex">\([a,b]\)</span> 上的一元连续函数，则有</p>
 <div class="arithmatex">\[
-    \int\int_Df(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)}f(x,y)\mathrm{d}y
+    \iint_Df(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)}f(x,y)\mathrm{d}y
 \]</div>
 <p><strong>Formula（直角坐标转极坐标）</strong></p>
 <div class="arithmatex">\[
-    \int\int_Df(x,y)\mathrm{d}x\mathrm{d}y=\int\int_{D'}f(r\cos\theta,r\sin\theta)r\mathrm{d}r\mathrm{d}\theta
+    \iint_Df(x,y)\mathrm{d}x\mathrm{d}y=\iint_{D'}f(r\cos\theta,r\sin\theta)r\mathrm{d}r\mathrm{d}\theta
 \]</div>
 <p><strong>Formula（变量替换）</strong> 设变换 <span class="arithmatex">\(T:\left\{\begin{aligned}&amp;x=x(u,v)\\&amp;y=y(u,v)\end{aligned}\right.\)</span> 有连续偏导数，且满足 <span class="arithmatex">\(J=\frac{\partial(x,y)}{\partial(u,v)}=\begin{vmatrix}x_u &amp; x_v\\y_u &amp; y_v\end{vmatrix}\neq 0\)</span>，又 <span class="arithmatex">\(f(x,y)\in C(D)\)</span>，则</p>
 <div class="arithmatex">\[
-    \int\int_Df(x,y)\mathrm{d}x\mathrm{d}y=\int\int_{D'}f(x(u,v),y(u,v))|J|\mathrm{d}u\mathrm{v}
+    \iint_Df(x,y)\mathrm{d}x\mathrm{d}y=\iint_{D'}f(x(u,v),y(u,v))|J|\mathrm{d}u\mathrm{v}
 \]</div>
 <p>其中 <span class="arithmatex">\(T\)</span> 将 <span class="arithmatex">\(D'\)</span> 变为 <span class="arithmatex">\(D\)</span>。</p>
+<h2 id="113">11.3 三重积分的计算</h2>
+<p><strong>Theorem</strong> 设 <span class="arithmatex">\(f(x,y,z)\)</span> 在 <span class="arithmatex">\([a,b]\times[c,d]\times[e,h]\)</span> 上可积。</p>
+<p>(1) 若对于任意 <span class="arithmatex">\((x,y)\in [a,b]\times [c,d]\)</span>，存在首次积分 <span class="arithmatex">\(\mu(x,y)=\int_{e}^{h}f(x,y,z)\mathrm{d}z\)</span>，则</p>
+<div class="arithmatex">\[
+    \iiint_{[a,b]\times[c,d]\times[e,h]}f(x,y,z)\mathrm{d}V=\iint_{[a,b]\times[c,d]}\mathrm{d}x\mathrm{d}y\int_{e}^{h}f(x,y,z)\mathrm{d}z
+\]</div>
+<p>(2) 若对于任意 <span class="arithmatex">\(z\in [e,h]\)</span>，存在二重积分 <span class="arithmatex">\(\mu(z)=\iint_{[a,b]\times [c,d]}f(x,y,z)\mathrm{d}x\mathrm{d}y\)</span></p>
+<div class="arithmatex">\[
+    \iiint_{[a,b]\times[c,d]\times[e,h]}f(x,y,z)\mathrm{d}V=\int_{e}^{h}\mathrm{d}z\iint_{[a,b]\times[c,d]}f(x,y,z)\mathrm{d}x\mathrm{d}y
+\]</div>
+<p><strong>Formula（球面坐标）</strong> 坐标变换关系为</p>
+<div class="arithmatex">\[
+\left\{\begin{aligned}
+    &amp; x = \rho\sin\phi\cos\theta\\
+    &amp; y = \rho\sin\phi\sin\theta\\
+    &amp; z = \rho\cos\phi
+\end{aligned}\right.
+\]</div>
+<div class="arithmatex">\[
+    \iiint_{\Omega}f(x,y,z)\mathrm{d}V=\iiint_{\Omega'}f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta,\rho\cos\phi)\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta
+\]</div>
+<p><strong>Theorem（多重积分）</strong> 设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(\Omega=[a_1,b_1]\times[a_2,b_2]\times\cdots\times[a_n,b_n]\)</span> 上连续，则</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    &amp; \iint\cdots\int_{\Omega}f(x_1,x_2,...,x_n)\mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_n\\
+    = &amp; \int_{a_1}^{b_1}\mathrm{d}x_1\int\cdots\int_{[a_2,b_2]\times\cdots\times[a_n,b_n]}f(x_1,x_2,...,x_n)\mathrm{d}x_2\cdots\mathrm{d}x_n\\
+    = &amp; \int\cdots\int_{[a_1,b_1]\times\cdots\times[a_{n-1},b_{n-1}]}\mathrm{d}x_1\cdots\mathrm{d}x_{n-1}\int_{a_n}^{b_n}f(x_1,x_2,...,x_n)\mathrm{d}x_n
+\end{aligned}
+\]</div>
 
 
 
