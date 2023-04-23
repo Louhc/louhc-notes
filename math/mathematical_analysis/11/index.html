@@ -796,6 +796,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/thermodynamics/" class="md-nav__link">
+        热力学
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1427,6 +1441,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day2/" class="md-nav__link">
+        第二天
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1514,7 +1542,27 @@
 <div class="arithmatex">\[
     \int\int_{[a,b]\times[c,d]}f(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_c^df(x,y)\mathrm{d}y
 \]</div>
-<p><strong>Cor</strong></p>
+<p><strong>Corollary</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\times[c,d]\)</span> 上连续，则有</p>
+<div class="arithmatex">\[
+    \int\int_{[a,b]\times[c,d]}f(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_c^df(x,y)\mathrm{d}y=\int_c^d\mathrm{d}y\int_a^bf(x,y)\mathrm{d}x
+\]</div>
+<p><strong>Corollary</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\times[c,d]\)</span> 上连续，<span class="arithmatex">\(g(y)\)</span> 在 <span class="arithmatex">\([c,d]\)</span> 上连续，记 <span class="arithmatex">\(D=[a,b]\times [c,d]\)</span>，则有</p>
+<div class="arithmatex">\[
+    \int\int_{D}f(x)g(y)\mathrm{d}\sigma=\int_a^bf(x)\mathrm{d}x\int_c^dg(y)\mathrm{d}y
+\]</div>
+<p><strong>Corollary</strong> 设 <span class="arithmatex">\(f(x,y)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 型区域 <span class="arithmatex">\(D=\{(x,y)|a\leq x\leq b,y_1(x)\leq y\leq y_2(x)\}\)</span> 上连续，其中 <span class="arithmatex">\(y_1(x),y_2(x)\)</span> 是 <span class="arithmatex">\([a,b]\)</span> 上的一元连续函数，则有</p>
+<div class="arithmatex">\[
+    \int\int_Df(x,y)\mathrm{d}\sigma=\int_a^b\mathrm{d}x\int_{y_1(x)}^{y_2(x)}f(x,y)\mathrm{d}y
+\]</div>
+<p><strong>Formula（直角坐标转极坐标）</strong></p>
+<div class="arithmatex">\[
+    \int\int_Df(x,y)\mathrm{d}x\mathrm{d}y=\int\int_{D'}f(r\cos\theta,r\sin\theta)r\mathrm{d}r\mathrm{d}\theta
+\]</div>
+<p><strong>Formula（变量替换）</strong> 设变换 <span class="arithmatex">\(T:\left\{\begin{aligned}&amp;x=x(u,v)\\&amp;y=y(u,v)\end{aligned}\right.\)</span> 有连续偏导数，且满足 <span class="arithmatex">\(J=\frac{\partial(x,y)}{\partial(u,v)}=\begin{vmatrix}x_u &amp; x_v\\y_u &amp; y_v\end{vmatrix}\neq 0\)</span>，又 <span class="arithmatex">\(f(x,y)\in C(D)\)</span>，则</p>
+<div class="arithmatex">\[
+    \int\int_Df(x,y)\mathrm{d}x\mathrm{d}y=\int\int_{D'}f(x(u,v),y(u,v))|J|\mathrm{d}u\mathrm{v}
+\]</div>
+<p>其中 <span class="arithmatex">\(T\)</span> 将 <span class="arithmatex">\(D'\)</span> 变为 <span class="arithmatex">\(D\)</span>。</p>
 
 
 

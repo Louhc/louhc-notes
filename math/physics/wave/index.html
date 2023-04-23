@@ -12,7 +12,7 @@
         <link rel="prev" href="../../mathematical_analysis/11/">
       
       
-        <link rel="next" href="../../probability_theory/">
+        <link rel="next" href="../thermodynamics/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
@@ -808,10 +808,31 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    不知道叫啥
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thermodynamics/" class="md-nav__link">
+        热力学
+      </a>
     </li>
   
 
@@ -1448,6 +1469,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day2/" class="md-nav__link">
+        第二天
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1518,6 +1553,13 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     傅里叶级数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    不知道叫啥
   </a>
   
 </li>
@@ -1667,6 +1709,31 @@
     &amp; T &amp; \text{for } n = m
     \end{aligned}\right.
 \]</div>
+<p><strong>能量定理</strong> 波的能量正比于其振幅的平方</p>
+<div class="arithmatex">\[
+    \int_0^{\infty}f^2(t)\mathrm{d}t=\int_0^{\infty}[a_0+\sum_{n=1}^{\infty}[a_n\cos(n\omega t)+b_n\sin(n\omega t)]]^2\mathrm{d}t
+\]</div>
+<p>总能量为所有傅里叶分量的能量的和。</p>
+<p><strong>傅里叶变换</strong> </p>
+<div class="arithmatex">\[
+f(t)=\sum_{n=-\infty}^{\infty}c_ne^{in\omega t}
+\]</div>
+<p>如果 <span class="arithmatex">\(T\to\infty,\omega\to 0\)</span></p>
+<div class="arithmatex">\[
+    f(t)=\int_{-\infty}^{\infty}c(\eta)e^{2\pi i\eta t}\mathrm{d}\eta
+\]</div>
+<div class="arithmatex">\[
+    c(\eta)=\int_{-\infty}^{\infty}f(t)e^{-2\pi i\eta t}\mathrm{d}t
+\]</div>
+<p><span class="arithmatex">\(c(\eta)\)</span> 称为 <span class="arithmatex">\(f(t)\)</span> 的傅里叶变换。傅里叶变换给出了组成一个时间函数的各频率振动的振幅。</p>
+<hr />
+<h2 id="_6">不知道叫啥</h2>
+<p><strong>驻波上的能量</strong> 总平均能流密度</p>
+<div class="arithmatex">\[
+    \langle w\rangle v+\langle w\rangle(-v)=0
+\]</div>
+<p>平均来说没有能量的传播，驻波中的动能和势能有一定的分布。</p>
+<p>若在介质中相速度与群速度有差别，称为色散。</p>
 
 
 
@@ -1704,13 +1771,13 @@
         
         
           
-          <a href="../../probability_theory/" class="md-footer__link md-footer__link--next" aria-label="下一页: 概率论" rel="next">
+          <a href="../thermodynamics/" class="md-footer__link md-footer__link--next" aria-label="下一页: 热力学" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                概率论
+                热力学
               </div>
             </div>
             <div class="md-footer__button md-icon">
