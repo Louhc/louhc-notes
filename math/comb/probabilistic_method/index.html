@@ -602,8 +602,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ramsey-number" class="md-nav__link">
-    Ramsey Number
+  <a href="#lovasz-local-lemma" class="md-nav__link">
+    Lovász Local Lemma
   </a>
   
 </li>
@@ -1558,8 +1558,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ramsey-number" class="md-nav__link">
-    Ramsey Number
+  <a href="#lovasz-local-lemma" class="md-nav__link">
+    Lovász Local Lemma
   </a>
   
 </li>
@@ -1582,8 +1582,7 @@
 <h1 id="_1">概率方法</h1>
 <p>为了证明某事的存在性，我们可以构建一个概率空间，然后表明这件事发生的概率是大于 <span class="arithmatex">\(0\)</span> 的。
 另一种方法是计算随机变量的期望值，讨论随机变量不大于或不小于期望值的概率不为 <span class="arithmatex">\(0\)</span>。</p>
-<h2 id="ramsey-number">Ramsey Number</h2>
-<p><span class="arithmatex">\(R(k,k)\)</span> 表示完全图的最小节点数，使得如果对边任意染色（红/蓝），总是存在一个全为红边或全为蓝边的大小为 <span class="arithmatex">\(k\)</span> 的团。</p>
+<p><em>Ramsey Number</em> <span class="arithmatex">\(R(k,k)\)</span> 表示完全图的最小节点数，使得如果对边任意染色（红/蓝），总是存在一个全为红边或全为蓝边的大小为 <span class="arithmatex">\(k\)</span> 的团。</p>
 <p>类似地可以定义 <span class="arithmatex">\(R(k,l)\)</span>，但是由对称性，显然 <span class="arithmatex">\(R(k,l)=R(\max\{k,l\},\max\{k,l\})\)</span>。</p>
 <p><strong>Theorem（Erdős）</strong> 令 <span class="arithmatex">\(G=(V,E)\)</span> 是一个有 <span class="arithmatex">\(n\)</span> 个节点的完全图。如果 <span class="arithmatex">\(\binom{n}{k}2^{1-\binom{k}{2}}&lt;1\)</span>，那么存在一种 <span class="arithmatex">\(G\)</span> 的染色方案，使得 <span class="arithmatex">\(G\)</span> 不存在一个单色子团 <span class="arithmatex">\(K_k\)</span>。</p>
 <p><em>Proof</em></p>
@@ -1596,14 +1595,17 @@
 \end{aligned}
 \]</div>
 <p>因此如果 <span class="arithmatex">\(\binom{n}{k}2^{1-\binom{k}{2}}&lt;1\)</span>，就有 <span class="arithmatex">\(R(k,k)&gt; n\)</span>。</p>
-<p><strong>Lemma（??? bound）</strong></p>
+<h2 id="lovasz-local-lemma">Lovász Local Lemma</h2>
+<p><strong>Lemma（union bound）</strong></p>
 <div class="arithmatex">\[
-    \mathrm{Pr}[\bigcup_{i=1}^nB_i]\leq \sum_{i=1}^n\mathrm{Pr}[B_i]&lt;1
+    \mathrm{Pr}[\bigcup_{i=1}^nB_i]\leq \sum_{i=1}^n\mathrm{Pr}[B_i]
 \]</div>
-<p>当它们互斥时取等。如果事件是独立的，这个上界会非常糟糕。</p>
-<p><strong>Lemma（LLL，Lovász Local Lemma）</strong> 如果 <span class="arithmatex">\(p(B_i)\leq p &lt; 1\)</span>，<span class="arithmatex">\(ep(\Delta+1)&lt;1\)</span>，那么 <span class="arithmatex">\(\mathrm{Pr}[\bigcap_{i=1}^n\overline{B_i}]&gt;0\)</span></p>
-<p>https://zhuanlan.zhihu.com/p/130701596</p>
-<p>https://tcs.nju.edu.cn/wiki/index.php?oldid=6446</p>
+<p>因此当 <span class="arithmatex">\(\sum_{i=1}^n\mathrm{Pr}[B_i]&lt;1\)</span> 时，<span class="arithmatex">\(\mathrm{Pr}[\bigcap_{i=1}^n\overline{B_i}]&gt;0\)</span>。</p>
+<p>当它们互斥时取等。如果事件是独立的，这个上界会非常糟糕。因此我们考虑将考虑事件独立性以得到更紧的上界。</p>
+<p>定义一个图 <span class="arithmatex">\(G=(V,E)\)</span>，<span class="arithmatex">\(|V|=m\)</span> 表示 <span class="arithmatex">\(m\)</span> 个坏事件，如果 <span class="arithmatex">\(B_i\)</span> 与 <span class="arithmatex">\(B_j\)</span> 独立，<span class="arithmatex">\(i\)</span> 与 <span class="arithmatex">\(j\)</span> 之间<strong>没有边</strong>，否则有边。<span class="arithmatex">\(d\)</span> 为 <span class="arithmatex">\(G\)</span> 的最大度。</p>
+<p><strong>Lemma（LLL，Lovász Local Lemma）</strong> 存在 <span class="arithmatex">\(p\in [0,1)\)</span>，对于任何 <span class="arithmatex">\(i\in[m]\)</span>，满足 <span class="arithmatex">\(\mathrm{Pr}[B_i]\leq p\)</span>。如果 <span class="arithmatex">\(ep(d+1)&lt;1\)</span>，那么 <span class="arithmatex">\(\mathrm{Pr}[\bigcap_{i=1}^n\overline{B_i}]&gt;0\)</span>。<a href="https://zhuanlan.zhihu.com/p/130701596">link</a> <a href="https://tcs.nju.edu.cn/wiki/index.php?oldid=6446">link</a></p>
+<p><em>Example（k-SAT）</em> 考虑一个 <span class="arithmatex">\(k-CNF\)</span>，它的度数为 <span class="arithmatex">\(\Delta\)</span>。（<span class="arithmatex">\(\phi=C_1\wedge C_2\wedge\cdots C_m\)</span> 有 <span class="arithmatex">\(m\)</span> 个 Clause，每个 Clause 至多有 <span class="arithmatex">\(k\)</span> 个 literal，每个 literal 至多在 <span class="arithmatex">\(\Delta\)</span> 个 Clause 中出现过）定义坏事件 <span class="arithmatex">\(B_i\)</span> 表示 <span class="arithmatex">\(C_i\)</span> 为假，显然 <span class="arithmatex">\(\mathrm{Pr}(B_i)\leq 2^{-k}\)</span>，因此 <span class="arithmatex">\(p=2^{-k}\)</span>。而与 <span class="arithmatex">\(C_i\)</span> 相邻的节点至多有 <span class="arithmatex">\(k\Delta\)</span>，因此 <span class="arithmatex">\(d\leq k\Delta\)</span>，因此当 <span class="arithmatex">\(e\cdot 2^{-k}(k\Delta+1)\)</span> 时，<span class="arithmatex">\(\phi\)</span> 为真。</p>
+<p><em>Example（Independent Set）</em> 考虑</p>
 
 
 
