@@ -560,6 +560,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comb/probabilistic_method/" class="md-nav__link">
+        概率方法
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -801,6 +815,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分子热运动与扩散
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxwell" class="md-nav__link">
+    MAXWELL 分布
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -880,20 +908,6 @@
     <li class="md-nav__item">
       <a href="../../probability_theory/expectation/" class="md-nav__link">
         离散随机变量与期望
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../probability_theory/probabilistic_method/" class="md-nav__link">
-        概率统计方法
       </a>
     </li>
   
@@ -1497,6 +1511,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day3/" class="md-nav__link">
+        第三天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day4/" class="md-nav__link">
+        第四天
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1550,6 +1592,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分子热运动与扩散
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxwell" class="md-nav__link">
+    MAXWELL 分布
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1576,6 +1632,10 @@
 <li>物质的状态、相变</li>
 <li>输运与扩散</li>
 </ul>
+<p><strong>cheating sheet</strong></p>
+<div class="arithmatex">\[
+    pV=nRT
+\]</div>
 <hr />
 <h2 id="_2">温度与理想气体方程</h2>
 <p>热力学是与<strong>热</strong>、<strong>温度</strong>以及相关的能量和功相关的物理学分支。</p>
@@ -1589,6 +1649,87 @@
     T_c=\frac59(T_F-32), T_F=\frac95T_c+32
 \]</div>
 <p>定容气体温度计：用体积不变的气体的压强变化来标定温度。</p>
+<div class="arithmatex">\[
+    P(T)=P(T_1)+\frac{P(T_2)-P(T_1)}{T_2-T_1}(T-T_1)
+\]</div>
+<p>若 <span class="arithmatex">\(T_1=0\)</span>, <span class="arithmatex">\(P(T)=P_0+\alpha_pT\)</span>, <span class="arithmatex">\(\alpha_p=\frac{P_2-P_0}{T_2}\)</span></p>
+<p>不同气体 <span class="arithmatex">\(P_0\)</span> 不同，<span class="arithmatex">\(\alpha_p\)</span> 不同。实验发现：当使用气体足够稀薄时，<span class="arithmatex">\(\alpha_p\)</span> 趋于相同，且出现极限温度。</p>
+<p><strong>理想气体</strong> <span class="arithmatex">\(P_0\)</span> 趋于 <span class="arithmatex">\(0\)</span> 的气体称<strong>理想气体</strong>。用理想气体标定的温标称理想气体温标。重新规定的 <span class="arithmatex">\(0^{\circ}C=273.15K\)</span>，<span class="arithmatex">\(K\)</span> 为理想气体温标单位，称<strong>开尔文</strong>。 <span class="arithmatex">\(T=\frac{P}{P_0}T_0=\frac{V}{V_0}T_0\)</span></p>
+<p><strong>广延量与强度量</strong> <strong>强度量</strong>是不依赖与物质多少或大小的量，体现物质的整体性质。<strong>广延量</strong>是根据物质多少决定的，可由独立、无相互作用的子系统叠加而来。</p>
+<p><strong>平衡态</strong> 系统各处的强度量不随时间发生变化，系统各处的强度量都相同。</p>
+<p>在隔绝外界影响的情况下，让两个物体相互接触，让它们之间能够发生传热。经过足够长的时间后两物体的宏观性质不发生改变。称它们彼此达到了<strong>热平衡</strong>。</p>
+<p><strong>热力学第零定律</strong> 在与外界影响隔绝的条件下，如果处于确定状态下的物体C分别与物体A、B达到热平衡，则物体A和B也是相互热平衡的。</p>
+<p><strong>理想气体方程</strong> 从理想气体的温度与压强和体积之间的关系可得</p>
+<div class="arithmatex">\[
+    pV=nRT
+\]</div>
+<p>其中 <span class="arithmatex">\(n\)</span> 为气体的量，<span class="arithmatex">\(R\)</span> 称气体常数。</p>
+<p>对于真实气体</p>
+<div class="arithmatex">\[
+    T=\lim_{p\to 0}\frac{pV}{nR}
+\]</div>
+<p>理想气体：质点、无相互作用势、弹性碰撞</p>
+<p><strong>Boltzmann 常数</strong></p>
+<div class="arithmatex">\[
+    k_B=\frac{R}{N_A}
+\]</div>
+<p>为单个分子的热力学常数，由 <span class="arithmatex">\(N=nN_A\)</span>，理想气体的另一形式为</p>
+<div class="arithmatex">\[
+    pV=Nk_BT
+\]</div>
+<p><strong>粒子数密度</strong>为</p>
+<div class="arithmatex">\[
+    n_N=\frac{N}{V}
+\]</div>
+<p>因此理想气体方程又可以写成</p>
+<div class="arithmatex">\[
+    p=n_Nk_BT
+\]</div>
+<h2 id="_3">分子热运动与扩散</h2>
+<p>物质由分子、原子组成。分子在不断运动（热运动）。从分子动理论的角度，压强来自于粒子与容器壁之间的<strong>碰撞</strong>。</p>
+<p>温度与气体分子平均动能之间的关系为</p>
+<div class="arithmatex">\[
+    \overline{\epsilon}=\frac32k_BT
+\]</div>
+<p><strong>能量均分定理</strong> 单原子理想气体分子有三个自由度，即三个相互垂直的方向上运动独立（各向同性）。因此可认为三个方向上分子平均动能相同。</p>
+<div class="arithmatex">\[
+    \frac12m\overline{v_x^2}=\frac12m\overline{v_y^2}=\frac12m\overline{v_z^2}=\frac12k_BT
+\]</div>
+<p>（不管分子的质量，氧气分子和氮气分子，甚至和灰尘，动能都是一样的）</p>
+<p>双原子理想气体分子有 <span class="arithmatex">\(6\)</span> 个自由度。能量均分假设：由于分子热运动，其每个独立自由度导致运动的平均能量相同，均为 <span class="arithmatex">\(\frac12k_BT\)</span>。考虑到振动时一定有势能，且势能的平均值和相应动能的平均值相同，因此每个振动自由度对应的能量应为 <span class="arithmatex">\(k_BT\)</span>。</p>
+<p>设分子具有 <span class="arithmatex">\(t\)</span> 个平动自由度、<span class="arithmatex">\(r\)</span> 个转动自由度，<span class="arithmatex">\(s\)</span> 个振动自由度，则其所具有的平均能量为</p>
+<div class="arithmatex">\[
+    \overline{\epsilon}=\frac{t+r+2s}{2}k_BT
+\]</div>
+<p><strong>内能</strong> 物质的内能定义为物体中所有分子原子相对于物体质心的动能和势能和。则对于理想气体，每摩尔物质所具有的内能为</p>
+<div class="arithmatex">\[
+    U^{\mathrm{mol}}=N_A(t+r+2s)\frac12k_BT=\frac{t+r+2s}{2}RT
+\]</div>
+<p>物体吸热或放热改变了物体内能——传热即传递能量。则物体的<strong>等容摩尔比热容</strong>为</p>
+<div class="arithmatex">\[
+    c_Y^{\mathrm{mol}}=\frac{\mathrm{d}U^{\mathrm{mol}}}{\mathrm{d}T}=\frac{t+r+2s}{2}R
+\]</div>
+<blockquote>
+<p>事实上，理论值与实际值相差很大，这是因为量子效应导致比热容变换。</p>
+</blockquote>
+<h2 id="maxwell">MAXWELL 分布</h2>
+<p>气体分子速率概率分布。<span class="arithmatex">\(P(v)\mathrm{d}v\)</span> 速率在 <span class="arithmatex">\(v\sim v+\mathrm{d}v\)</span> 之间的粒子数。平均速率 <span class="arithmatex">\(\overline{v}=\int_{0}^{\infty}vP(v)\mathrm{d}v\)</span>。</p>
+<p><strong>MAXWELL 分布</strong></p>
+<div class="arithmatex">\[
+    P(v)=\sqrt{(\frac{m}{2\pi kT})^3}e^{-\frac{mv^2}{2kT}}
+\]</div>
+<p><span class="arithmatex">\(\sqrt{(\frac{m}{2\pi kT})^3}\)</span> 叫归一化系数。归一化条件</p>
+<div class="arithmatex">\[
+    \iiint P(v)\mathrm{d}v_x\mathrm{d}v_y\mathrm{d}v_z=\int_{0}^{\infty}4\pi v^2P(v)\mathrm{d}v
+\]</div>
+<p>平均速率</p>
+<div class="arithmatex">\[
+    \overline{v}=\int p(v)v\mathrm{d}v=\sqrt{\frac{8RT}{\pi M}}
+\]</div>
+<p>方均根速率</p>
+<div class="arithmatex">\[
+    \sqrt{\overline{v^2}}=\sqrt{\int p(v)v^2\mathrm{d}v}=\sqrt{\frac{3RT}{\pi M}}
+\]</div>
 
 
 

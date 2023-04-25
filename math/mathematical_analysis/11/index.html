@@ -560,6 +560,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comb/probabilistic_method/" class="md-nav__link">
+        概率方法
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -746,6 +760,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    广义重积分
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -887,20 +908,6 @@
     <li class="md-nav__item">
       <a href="../../probability_theory/expectation/" class="md-nav__link">
         离散随机变量与期望
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../probability_theory/probabilistic_method/" class="md-nav__link">
-        概率统计方法
       </a>
     </li>
   
@@ -1504,6 +1511,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day3/" class="md-nav__link">
+        第三天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day4/" class="md-nav__link">
+        第四天
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1560,6 +1595,13 @@
         <li class="md-nav__item">
   <a href="#113" class="md-nav__link">
     11.3 三重积分的计算
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    广义重积分
   </a>
   
 </li>
@@ -1648,6 +1690,24 @@
     = &amp; \int\cdots\int_{[a_1,b_1]\times\cdots\times[a_{n-1},b_{n-1}]}\mathrm{d}x_1\cdots\mathrm{d}x_{n-1}\int_{a_n}^{b_n}f(x_1,x_2,...,x_n)\mathrm{d}x_n
 \end{aligned}
 \]</div>
+<h2 id="_2">广义重积分</h2>
+<p><strong>Definition（穷竭列）</strong> 设 <span class="arithmatex">\(D\subset\mathbb R^2\)</span> 区域，且 <span class="arithmatex">\(\forall R&gt;0,D\cap B_R(0)\)</span> 可求面积，称 <span class="arithmatex">\(\{D_n\}\)</span> 为 <span class="arithmatex">\(D\)</span> 的一个<strong>穷竭列</strong>，若 <span class="arithmatex">\(D_n\)</span> 是有界闭且可求面积，并满足</p>
+<ol>
+<li><span class="arithmatex">\(D_1\subset D_2\subset\cdots\subset D_n\subset\cdots\subset D\)</span></li>
+<li><span class="arithmatex">\(\forall \text{有界闭 }F\subset D,\exists m&gt;0\)</span>，s.t. <span class="arithmatex">\(F\subset D_m\)</span></li>
+</ol>
+<p><strong>Definition（广义积分）</strong> 设 <span class="arithmatex">\(D\subset\mathbb R^2\)</span> 区域，<span class="arithmatex">\(\forall R&gt;0,D\cap B_R(0)\)</span> 可求面积，设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(D\)</span> 上内闭可积（<span class="arithmatex">\(\forall\)</span> 有界闭且可求面积的 <span class="arithmatex">\(F\subset D\)</span>，有 <span class="arithmatex">\(f\in R(F)\)</span>），若 <span class="arithmatex">\(\forall D\)</span> 的任一穷竭列 <span class="arithmatex">\(\{D_n\}\)</span>，有 <span class="arithmatex">\(\lim_{n\to\infty}\iint_{D_n}f\mathrm{d}x\mathrm{d}y=I\)</span> 存在，且极限与 <span class="arithmatex">\(\{D_n\}\)</span> 的选取无关，则称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(D\)</span> 上广义可积，记为 <span class="arithmatex">\(I=\iint_{D}f\mathrm{d}x\mathrm{d}y\)</span>。（这个定义十分苛刻，完全没法用）</p>
+<p><strong>Theorem</strong> 设 <span class="arithmatex">\(f\geq 0\)</span> 及所需的条件，则</p>
+<div class="arithmatex">\[
+    \iint_Df\mathrm{d}x\mathrm{d}y\text{ 收敛}\Longleftrightarrow\exists D\text{的一个穷竭列}\{D_n\},\lim_{n\to\infty}\iint_{D_n}f\mathrm{d}x\mathrm{d}y\text{ 收敛}
+\]</div>
+<p>接下来看一半情形。一维时有条件收敛、绝对收敛之分。</p>
+<p><strong>Theorem（Riemann）</strong> 设 <span class="arithmatex">\(\sum_{n=1}^{\infty}\)</span> 条件收敛，则 <span class="arithmatex">\(\forall A\in\mathbb R\)</span> 或 <span class="arithmatex">\(A=+\infty\)</span> 或 <span class="arithmatex">\(A=-\infty\)</span>，<span class="arithmatex">\(\exists\sum_{n=1}^{\infty}a_n\)</span> 的一个更序级数 <span class="arithmatex">\(\sum_{n=1}^{\infty}a_n'\)</span> s.t. <span class="arithmatex">\(\sum_{n=1}^{\infty}a_n'=A\)</span></p>
+<p><strong>Theorem</strong> 没有条件收敛、绝对收敛之分。</p>
+<div class="arithmatex">\[
+\iint_{D}f\mathrm{d}x\mathrm{d}y\text{ 广义积分收敛 }\Longleftrightarrow\iint_{D}|f|\mathrm{d}x\mathrm{d}y\text{ 广义积分收敛}
+\]</div>
+<p><strong>Theorem</strong> <span class="arithmatex">\(D=[a,+\infty)\times[c,+\infty)\)</span>，<span class="arithmatex">\(f\in C(D)\)</span>，设 <span class="arithmatex">\(\int_{a}^{+\infty}\mathrm{d}x\int_{c}^{+\infty}\mathrm{d}yf(x,y)\)</span> 存在且 <span class="arithmatex">\(\int_{a}^{+\infty}\mathrm{d}x\int_{c}^{+\infty}\mathrm{d}y|f(x,y)|&lt;+\infty\)</span>，则 <span class="arithmatex">\(\iint_{D}f\mathrm{d}x\mathrm{d}y=\int_{a}^{+\infty}\mathrm{d}x\int_{c}^{+\infty}\mathrm{d}yf(x,y)\)</span></p>
 
 
 

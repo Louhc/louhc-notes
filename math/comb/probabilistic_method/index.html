@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../probability/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../../crypto/">
+        <link rel="next" href="../../linear_algebra/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>离散随机变量与期望 - _(:з」∠)_</title>
+        <title>概率方法 - _(:з」∠)_</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              离散随机变量与期望
+              概率方法
             
           </span>
         </div>
@@ -523,14 +523,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -539,7 +541,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           组合数学
@@ -552,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../comb/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         组合数学
       </a>
     </li>
@@ -564,11 +566,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../comb/probabilistic_method/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          概率方法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         概率方法
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ramsey-number" class="md-nav__link">
+    Ramsey Number
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -785,16 +828,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
       
       
       
@@ -803,7 +844,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           概率论
@@ -816,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../probability_theory/" class="md-nav__link">
         概率论
       </a>
     </li>
@@ -830,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../probability/" class="md-nav__link">
+      <a href="../../probability_theory/probability/" class="md-nav__link">
         事件与概率
       </a>
     </li>
@@ -842,21 +883,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../probability_theory/expectation/" class="md-nav__link">
         离散随机变量与期望
       </a>
-      
     </li>
   
 
@@ -1520,6 +1551,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ramsey-number" class="md-nav__link">
+    Ramsey Number
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1533,81 +1579,31 @@
                   
 
 
-<h1 id="_1">离散随机变量与期望</h1>
-<p><strong>Definition（Random Variable）</strong> 在样本空间 <span class="arithmatex">\(\Omega\)</span> 上的<strong>随机变量</strong> <span class="arithmatex">\(X\)</span> 是一个 <span class="arithmatex">\(\Omega\)</span> 实值（可测量的）函数，即 <span class="arithmatex">\(X:\Omega\to\mathbb R\)</span>。<strong>离散随机变量</strong>是一个只有有限或可数个取值的随机变量。</p>
-<p><span class="arithmatex">\(X=a\)</span> 代表集合 <span class="arithmatex">\(\{s\in\Omega\,|\,X(s)=a\}\)</span></p>
-<div class="arithmatex">\[
-    \mathrm{Pr}(X=a)=\sum_{s\in\Omega,X(s)=a}\mathrm{Pr}(s)
-\]</div>
-<p><strong>Definition（Independence）</strong> 随机变量 <span class="arithmatex">\(X_1,X_2,...,X_k\)</span> 是独立的当且仅当对于任何集合 <span class="arithmatex">\(I\subset [1,k]\)</span> 和任何值 <span class="arithmatex">\(x_i,i\in I\)</span></p>
-<div class="arithmatex">\[
-    \mathrm{Pr}(\bigcap_{i\in I}(X_i=x_i))=\prod_{i\in I}\mathrm{Pr}(X_i=x_i)
-\]</div>
-<p><strong>Definition（Expectation）</strong> 离散随机变量 <span class="arithmatex">\(X\)</span> 的期望 <span class="arithmatex">\(\mathbf{E}[X]\)</span> 是</p>
-<div class="arithmatex">\[
-    \mathbf{E}[X]=\sum_{i}i\mathrm{Pr}(X=i)
-\]</div>
-<p>当 <span class="arithmatex">\(\sum_{i}|i|\,\mathrm{Pr}(X=i)\)</span> 收敛时，期望值有限，否则期望无界。</p>
-<p><strong>Theorem（Linearity of Expectations）</strong> 对于任何有限个离散随机变量 <span class="arithmatex">\(X_1,X_2,...,X_n\)</span>，且它们的期望有限，</p>
-<div class="arithmatex">\[
-    \mathbf{E}[\sum_{i=1}^{n}X_i]=\sum_{i=1}^n\mathbf{E}[X_1]
-\]</div>
-<p><strong>Lemma</strong> 对于任何常数 <span class="arithmatex">\(c\)</span> 和离散随机变量 <span class="arithmatex">\(X\)</span></p>
-<div class="arithmatex">\[
-    \mathbf{E}[cX]=c\mathbf{E}[X]
-\]</div>
-<p><strong>Theorem（Jensen's Inequality）</strong> 如果 <span class="arithmatex">\(f\)</span> 是一个凸函数（<span class="arithmatex">\(f(\lambda x_1+(1-\lambda)x_2)\leq \lambda f(x_1)+(1-\lambda)f(x_2),0\leq\lambda\leq 1\)</span>），那么</p>
-<div class="arithmatex">\[
-    \mathbf{E}[f(X)]\geq f(\mathbf{E}[X])
-\]</div>
-<p><strong>Definition（Binomail Random Variables）</strong> 二项随机变量 <span class="arithmatex">\(X\)</span> 和参数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(p\)</span>，记为 <span class="arithmatex">\(B(n,p)\)</span>，用如下概率分布表示</p>
-<div class="arithmatex">\[
-    \mathrm{Pr}(X=j)=\binom{n}{j}p^j(1-p)^{n-j}
-\]</div>
-<p><strong>Definition（Conditional Expectation）</strong> </p>
-<div class="arithmatex">\[ 
-    \mathbf{E}[Y\,|\,Z=z]=\sum_{y}y\,\mathrm{Pr}(Y=y\,|\,Z=z)
-\]</div>
-<p><strong>Lemma</strong> 对于任意随机变量 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span></p>
-<div class="arithmatex">\[
-    \mathbf{E}[X]=\sum_{y}\mathrm{Pr}(Y=y)\mathbf{E}[X\,|\,Y=y]
-\]</div>
-<p><strong>Definition</strong> 表达式 <span class="arithmatex">\(\mathbf{E}[Y\,|\,Z]\)</span> 是一个随机变量 <span class="arithmatex">\(f(Z)\)</span>，当 <span class="arithmatex">\(Z=z\)</span> 时取值 <span class="arithmatex">\(E[Y\,|\,Z=z]\)</span>。</p>
-<p><strong>Theorem</strong></p>
-<div class="arithmatex">\[
-    \mathbf{E}[Y]=\mathbf{E}[\mathbf{E}[Y\,|\,Z]]
-\]</div>
-<p><strong>Definition（Geometric Random Variable）</strong> 几何随机变量 <span class="arithmatex">\(X\)</span> 和参数 <span class="arithmatex">\(p\)</span>，概率分布如下</p>
-<div class="arithmatex">\[
-    \mathrm{Pr}(X=n)=(1-p)^{n-1}p
-\]</div>
-<p><strong>Theorem（Markov Inequality）</strong></p>
-<div class="arithmatex">\[
-    \mathrm{Pr}[X\geq a]\leq \frac{\mathbf{E}X}{a}
-\]</div>
-<p>但是 <span class="arithmatex">\(\mathbf{E}(X_1\cdot X_2)\)</span> 不一定等于 <span class="arithmatex">\(\mathbf{E}X_1\cdot \mathbf{E}X_2\)</span>，除非 <span class="arithmatex">\(X_1\)</span> 与 <span class="arithmatex">\(X_2\)</span> 是独立的。</p>
-<p><strong>Definition（Variance）</strong> 随机变量 <span class="arithmatex">\(X\)</span> 的方差记作 <span class="arithmatex">\(\mathrm{Var}(X)\)</span></p>
-<div class="arithmatex">\[
-    \mathrm{Var}(X)\triangleq\mathbf{E}[(X-\mathbf{E}X)^2]=\mathbf{E}X^2-(\mathbf{E}X)^2
-\]</div>
-<p>当 <span class="arithmatex">\(X_1\perp X_2\)</span> 时，方差满足线性性，即 <span class="arithmatex">\(\mathrm{Var}(X_1+X_2)=\mathrm{Var}(X_1)+\mathrm{Var}(X_2)\)</span>。</p>
-<p><strong>Theorem（Chebyshev's Inequality）</strong></p>
-<div class="arithmatex">\[
-    \mathrm{Pr}[|X-\mathbf{E}X|\geq a]\leq \frac{\mathrm{Var}(X)}{a^2}
-\]</div>
+<h1 id="_1">概率方法</h1>
+<p>为了证明某事的存在性，我们可以构建一个概率空间，然后表明这件事发生的概率是大于 <span class="arithmatex">\(0\)</span> 的。
+另一种方法是计算随机变量的期望值，讨论随机变量不大于或不小于期望值的概率不为 <span class="arithmatex">\(0\)</span>。</p>
+<h2 id="ramsey-number">Ramsey Number</h2>
+<p><span class="arithmatex">\(R(k,k)\)</span> 表示完全图的最小节点数，使得如果对边任意染色（红/蓝），总是存在一个全为红边或全为蓝边的大小为 <span class="arithmatex">\(k\)</span> 的团。</p>
+<p>类似地可以定义 <span class="arithmatex">\(R(k,l)\)</span>，但是由对称性，显然 <span class="arithmatex">\(R(k,l)=R(\max\{k,l\},\max\{k,l\})\)</span>。</p>
+<p><strong>Theorem（Erdős）</strong> 令 <span class="arithmatex">\(G=(V,E)\)</span> 是一个有 <span class="arithmatex">\(n\)</span> 个节点的完全图。如果 <span class="arithmatex">\(\binom{n}{k}2^{1-\binom{k}{2}}&lt;1\)</span>，那么存在一种 <span class="arithmatex">\(G\)</span> 的染色方案，使得 <span class="arithmatex">\(G\)</span> 不存在一个单色子团 <span class="arithmatex">\(K_k\)</span>。</p>
 <p><em>Proof</em></p>
+<p>将 <span class="arithmatex">\(G\)</span> 的边随意染色，如果 <span class="arithmatex">\(G=K_n\)</span> 包含一个单色子团 <span class="arithmatex">\(K_k\)</span> 的概率小于 <span class="arithmatex">\(1\)</span>，那就说明会有一种染色方案使得不存在单色子团 <span class="arithmatex">\(K_k\)</span>。</p>
 <div class="arithmatex">\[
-    \mathrm{Pr}[|X-\mathbf{E}X|\geq a]=\mathrm{Pr}[(X-\mathbf{E}X)^2\geq a^2]\leq \frac{\mathbf{E}[(X-\mathbf{E}X)^2]}{a^2}=\frac{\mathrm{Var}(X)}{a^2}
+\begin{aligned}
+\mathrm{Pr}[K_n \text{包含一个单色子团} K_k] &amp;= \mathrm{Pr}[\exists S\subseteq\binom{[n]}{k},S\text{ 是一个单色团}]\\
+&amp;\leq \sum_{S\in\binom{[n]}{k}}\mathrm{Pr}[S\text{ 是一个单色团}]\\
+&amp;=\binom{n}{k}2^{1-\binom{k}{2}}
+\end{aligned}
 \]</div>
-<p><strong>Theorem（Weierstrass Approximation Theorem）</strong> 对于连续函数 <span class="arithmatex">\(f:[0,1]\to[-1,1]\)</span></p>
+<p>因此如果 <span class="arithmatex">\(\binom{n}{k}2^{1-\binom{k}{2}}&lt;1\)</span>，就有 <span class="arithmatex">\(R(k,k)&gt; n\)</span>。</p>
+<p><strong>Lemma（??? bound）</strong></p>
 <div class="arithmatex">\[
-    \forall\varepsilon&gt;0,\exists\text{ polynomial } p_{\varepsilon}:\forall x\in [0,1],|p(x)-f(x)|\leq\varepsilon
+    \mathrm{Pr}[\bigcup_{i=1}^nB_i]\leq \sum_{i=1}^n\mathrm{Pr}[B_i]&lt;1
 \]</div>
-<p>其中</p>
-<div class="arithmatex">\[
-    P_{n}(x)=\sum_{i=0}^{n}\alpha_i(x)\cdot f(\frac{i}{n}),\alpha_i=\binom{n}{i}x^i(1-x)^{n-i}
-\]</div>
-<p><strong>The Second Moment Method</strong></p>
+<p>当它们互斥时取等。如果事件是独立的，这个上界会非常糟糕。</p>
+<p><strong>Lemma（LLL，Lovász Local Lemma）</strong> 如果 <span class="arithmatex">\(p(B_i)\leq p &lt; 1\)</span>，<span class="arithmatex">\(ep(\Delta+1)&lt;1\)</span>，那么 <span class="arithmatex">\(\mathrm{Pr}[\bigcap_{i=1}^n\overline{B_i}]&gt;0\)</span></p>
+<p>https://zhuanlan.zhihu.com/p/130701596</p>
+<p>https://tcs.nju.edu.cn/wiki/index.php?oldid=6446</p>
 
 
 
@@ -1629,7 +1625,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../probability/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 事件与概率" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 组合数学" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1638,20 +1634,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                事件与概率
+                组合数学
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../crypto/" class="md-footer__link md-footer__link--next" aria-label="下一页: 密码学" rel="next">
+          <a href="../../linear_algebra/" class="md-footer__link md-footer__link--next" aria-label="下一页: 线性代数" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                密码学
+                线性代数
               </div>
             </div>
             <div class="md-footer__button md-icon">
