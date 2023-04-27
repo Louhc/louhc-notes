@@ -565,9 +565,99 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+          概率法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          概率法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../comb/probabilistic_method/" class="md-nav__link">
-        概率方法
+      <a href="../../comb/probabilistic/" class="md-nav__link">
+        概率法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comb/probabilistic/approximation/" class="md-nav__link">
+        近似算法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comb/probabilistic/second-moment/" class="md-nav__link">
+        Second-Moment Method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comb/probabilistic/local-lemma/" class="md-nav__link">
+        Lovász Local Lemma
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comb/polya/" class="md-nav__link">
+        Pólya计数法
       </a>
     </li>
   
@@ -706,6 +796,20 @@
     <li class="md-nav__item">
       <a href="../../mathematical_analysis/11/" class="md-nav__link">
         第十一章 重积分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mathematical_analysis/12/" class="md-nav__link">
+        第十二章 第一类曲线和曲面积分
       </a>
     </li>
   
@@ -1487,6 +1591,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day5/" class="md-nav__link">
+        第五天
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/japanese/day6/" class="md-nav__link">
+        第六天
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1552,6 +1684,7 @@
 <div class="arithmatex">\[
     \mathbf{E}[\sum_{i=1}^{n}X_i]=\sum_{i=1}^n\mathbf{E}[X_1]
 \]</div>
+<p>但是 <span class="arithmatex">\(\mathbf{E}(X_1\cdot X_2)\)</span> 不一定等于 <span class="arithmatex">\(\mathbf{E}X_1\cdot \mathbf{E}X_2\)</span>，除非 <span class="arithmatex">\(X_1\)</span> 与 <span class="arithmatex">\(X_2\)</span> 是独立的。</p>
 <p><strong>Lemma</strong> 对于任何常数 <span class="arithmatex">\(c\)</span> 和离散随机变量 <span class="arithmatex">\(X\)</span></p>
 <div class="arithmatex">\[
     \mathbf{E}[cX]=c\mathbf{E}[X]
@@ -1581,11 +1714,10 @@
 <div class="arithmatex">\[
     \mathrm{Pr}(X=n)=(1-p)^{n-1}p
 \]</div>
-<p><strong>Theorem（Markov Inequality）</strong></p>
+<p><strong>Theorem（Markov Inequality）</strong> 设 <span class="arithmatex">\(X\)</span> 是一个非负的随机变量，对于任意的 <span class="arithmatex">\(a\)</span> 都有。</p>
 <div class="arithmatex">\[
     \mathrm{Pr}[X\geq a]\leq \frac{\mathbf{E}X}{a}
 \]</div>
-<p>但是 <span class="arithmatex">\(\mathbf{E}(X_1\cdot X_2)\)</span> 不一定等于 <span class="arithmatex">\(\mathbf{E}X_1\cdot \mathbf{E}X_2\)</span>，除非 <span class="arithmatex">\(X_1\)</span> 与 <span class="arithmatex">\(X_2\)</span> 是独立的。</p>
 <p><strong>Definition（Variance）</strong> 随机变量 <span class="arithmatex">\(X\)</span> 的方差记作 <span class="arithmatex">\(\mathrm{Var}(X)\)</span></p>
 <div class="arithmatex">\[
     \mathrm{Var}(X)\triangleq\mathbf{E}[(X-\mathbf{E}X)^2]=\mathbf{E}X^2-(\mathbf{E}X)^2
@@ -1595,7 +1727,7 @@
 <div class="arithmatex">\[
     \mathrm{Pr}[|X-\mathbf{E}X|\geq a]\leq \frac{\mathrm{Var}(X)}{a^2}
 \]</div>
-<p><em>Proof</em></p>
+<p><em>Proof</em> 直接运用 Markov 即可。</p>
 <div class="arithmatex">\[
     \mathrm{Pr}[|X-\mathbf{E}X|\geq a]=\mathrm{Pr}[(X-\mathbf{E}X)^2\geq a^2]\leq \frac{\mathbf{E}[(X-\mathbf{E}X)^2]}{a^2}=\frac{\mathrm{Var}(X)}{a^2}
 \]</div>
@@ -1607,7 +1739,6 @@
 <div class="arithmatex">\[
     P_{n}(x)=\sum_{i=0}^{n}\alpha_i(x)\cdot f(\frac{i}{n}),\alpha_i=\binom{n}{i}x^i(1-x)^{n-i}
 \]</div>
-<p><strong>The Second Moment Method</strong></p>
 
 
 
